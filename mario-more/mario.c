@@ -16,7 +16,7 @@ int main(void)
     {
 
         //spaces
-        for (k=0; k < i-1; k++)
+        for (k=0; k < ans_layer-i-1; k++)
         {
             printf(" ");
         }
@@ -33,8 +33,10 @@ int main(void)
         //#
         for (m=0; m < i+1; m++)
         {
-            printf("#\n");
+            printf("#");
         }
+
+        printf("\n");
 
 
     }
