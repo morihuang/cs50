@@ -14,32 +14,31 @@ int main(void)
     int i, j, k, l, m;
     for (i=0; i < ans_layer; i++)
     {
-        for (j=0; j < ans_layer; j++)
+
+        //spaces
+        for (k=0; k < i-1; k++)
         {
-            //spaces
-            for (k=0; k < ans_layer-1; k++)
-            {
-                printf(" ");
-            }
-
-            //#
-            for (l=0; l < i+1; l++)
-            {
-                printf("#");
-            }
-
-            //gap
-            printf("  ");
-
-            //#
-            for (m=0; m < i+1; m++)
-            {
-                printf("#\n");
-            }
-
-
+            printf(" ");
         }
+
+        //#
+        for (l=0; l < i+1; l++)
+        {
+            printf("#");
+        }
+
+        //gap
+        printf("  ");
+
+        //#
+        for (m=0; m < i+1; m++)
+        {
+            printf("#\n");
+        }
+
+
     }
+
 
 
 }
