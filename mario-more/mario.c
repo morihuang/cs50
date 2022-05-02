@@ -23,7 +23,7 @@ int main(void)
             }
 
             //#
-            for (l=0; l < i; l++)
+            for (l=0; l < i+1; l++)
             {
                 printf("#");
             }
@@ -32,7 +32,7 @@ int main(void)
             printf("  ");
 
             //#
-            for (m=0; m < i; m++)
+            for (m=0; m < i+1; m++)
             {
                 printf("#\n");
             }
