@@ -12,18 +12,18 @@ int main(void)
     //printf("%i\n", ans_layer);
 
     int i, j, k, l, m;
-    for (i=0, i < ans_layer, i++)
+    for (i=0; i < ans_layer; i++)
     {
-        for (j=0, j < ans_layer, j++)
+        for (j=0; j < ans_layer; j++)
         {
             //spaces
-            for (k=0, k < ans_layer-1, k++)
+            for (k=0; k < ans_layer-1; k++)
             {
                 printf(" ");
             }
 
             //#
-            for (l=0, l < i, l++)
+            for (l=0; l < i; l++)
             {
                 printf("#");
             }
@@ -32,7 +32,7 @@ int main(void)
             printf("  ");
 
             //#
-            for (m=0, m < i, m++)
+            for (m=0; m < i; m++)
             {
                 printf("#\n");
             }
