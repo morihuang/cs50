@@ -12,18 +12,18 @@ int main(void)
 
 
     int i, j, k, l, m;
-    while (i=0, i < ans_layer, i+=1)
+    for (i=0, i < ans_layer, i++)
     {
-        while (j=0, j < ans_layer, j+=1)
+        for (j=0, j < ans_layer, j++)
         {
             //spaces
-            while (k=0, k < ans_layer-1, k+=1)
+            for (k=0, k < ans_layer-1, k++)
             {
                 printf(" ");
             }
 
             //#
-            while (l=0, l < i, l+=1)
+            for (l=0, l < i, l++)
             {
                 printf("#");
             }
@@ -32,7 +32,7 @@ int main(void)
             printf("  ");
 
             //#
-            while (m=0, m < i, m+=1)
+            for (m=0, m < i, m++)
             {
                 printf("#\n");
             }
