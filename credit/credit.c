@@ -8,6 +8,6 @@ int main(void)
     {
         ans = get_long("Number: ");
     }
-    while (ans < 10^13 || ans > 10^16);
+    while (ans < (10^13) || ans > (10^16));
 
 }
