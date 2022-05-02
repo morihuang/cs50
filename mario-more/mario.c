@@ -9,8 +9,8 @@ int main(void)
         ans_layer = get_int("Height: \n");
     }
     while (ans_layer < 1 || ans_layer > 8);
-
-
+    printf("%i", ans_layer);
+/*
     int i, j, k, l, m;
     for (i=0, i < ans_layer, i++)
     {
@@ -40,4 +40,6 @@ int main(void)
 
         }
     }
+
+    */
 }
