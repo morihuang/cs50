@@ -8,7 +8,7 @@ int main(void)
     {
         ans = get_long("Number: ");
     }
-    while (ans < 1e12 || 1e13 < ans < 1e15 || ans > (1e16));
+    while (ans < 1e12 || 1e13 < ans < 1e14 || ans > (1e16));
 
 
 }
