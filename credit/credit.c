@@ -10,4 +10,5 @@ int main(void)
     }
     while (ans < (1e13) || ans > (1e16));
 
+    
 }
