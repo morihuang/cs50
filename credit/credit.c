@@ -3,5 +3,11 @@
 
 int main(void)
 {
-    long ans = get_long("Number: ");
+    long ans;
+    do
+    {
+        ans = get_long("Number: ");
+    }
+    while ()
+
 }
