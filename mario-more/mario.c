@@ -3,6 +3,9 @@
 
 int main(void)
 {
+
+
+
     do
     {
         int ans_layer = get_int("Height: \n");
