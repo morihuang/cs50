@@ -30,6 +30,12 @@ int main(void)
                 printf("#");
             }
 
+            //gap
+            printf("  ");
+
+            //#
+            
+
         }
     }
 }
