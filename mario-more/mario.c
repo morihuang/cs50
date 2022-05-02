@@ -4,7 +4,7 @@
 int main(void)
 {
     int ans_layer = get_int("Height: \n");
-    if(ans_layer > 1 || ans_layer < 8:
+    if(ans_layer > 1 || ans_layer < 8):
     {
         for(i=0, i < ans_layer, i++):
         {
