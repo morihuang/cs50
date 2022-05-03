@@ -73,12 +73,16 @@ int main(void)
         t2_ans += (x_ans / (long) pow(10, j-1)) % 10;
 
         //t4_ans = t1_ans * 2 + t2_ans;
-        printf("%li, %li\n", t1_ans, t2_ans);
+        //printf("%li, %li\n", t1_ans, t2_ans);
     }
     t3_ans = t1_ans + t2_ans;
-    printf("%li\n", t3_ans);
+    //printf("%li\n", t3_ans);
 
-    if (t3_ans % 10 == 0)
+    if (t3_ans % 10 != 0)
+    {
+        printf("INVALID\n");
+    }
+    else
     {
         fd_ans = ans / pow(10, i-2);
         //printf("%li\n", fd_ans);
@@ -95,10 +99,6 @@ int main(void)
         {
             printf("VISA\n");
         }
-    }
-    else
-    {
-        printf("INVALID\n");
     }
 
 
