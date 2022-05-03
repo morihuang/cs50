@@ -31,7 +31,10 @@ int main(void)
     }
 
     //invalid test - Luhn’s Algorithm
-    
+    for (i = 0, (ans % 10^i) > 0, i += 2)
+    {
+        t_ans +=
+    }
 
 
 }
