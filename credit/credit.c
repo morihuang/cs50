@@ -25,7 +25,10 @@ int main(void)
         d = d / 10;
         i++;
     }
-    printf("%i, %li\n", i, ans);
+    if (i != 13 && i != 15 && i != 16)
+    {
+        printf("INVALID\n");
+    }
 
 
 }
