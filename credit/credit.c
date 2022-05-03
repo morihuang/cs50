@@ -17,7 +17,7 @@ int main(void)
 
     long ans = get_long("Number: ");
 
-    //invalid test
+    //invalid test - digit
     int i = 1;
     long d = ans;
     while (d > 10)
@@ -29,6 +29,9 @@ int main(void)
     {
         printf("INVALID\n");
     }
+
+    //invalid test - Luhn’s Algorithm
+    
 
 
 }
