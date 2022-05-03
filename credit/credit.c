@@ -8,9 +8,8 @@ int main(void)
     {
         ans = get_long("Number: ");
     }
-    while (ans < 1e12 || 1e13 <= ans < 1e14);
+    while (ans < 1e12 || 1e13 <= ans || ans < 1e14 || ans > 1e16);
 
-    // || ans > 1e16
-
+    printf("%li", ans);
 
 }
