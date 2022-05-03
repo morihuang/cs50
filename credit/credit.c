@@ -60,9 +60,10 @@ int main(void)
 
         //even digit * 2
         t11_ans = (x_ans / (long) pow(10, j)) % 10;
-        if (t11_ans * 2 > 9)
+        t11_ans *= 2;
+        if (t11_ans > 9)
         {
-            t11_ans = (t1_ans % 10) + ((t1_ans / 10) % 10);
+            t11_ans = (t11_ans % 10) + ((t11_ans / 10) % 10);
         }
         t1_ans += t11_ans * 2;
 
