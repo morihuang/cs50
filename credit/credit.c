@@ -90,7 +90,8 @@ int main(void)
         {
             printf("MASTERCARD\n");
         }
-        else if (fd_ans == 4)
+        fd_ans = ans / pow(10, i-1);
+        if (fd_ans == 4)
         {
             printf("VISA\n");
         }
