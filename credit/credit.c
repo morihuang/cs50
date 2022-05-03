@@ -17,4 +17,15 @@ int main(void)
 
     long ans = get_long("Number: ");
 
+    //invalid test
+    int i = 1;
+    long d = ans;
+    while (d > 10)
+    {
+        d = d / 10;
+        i++;
+    }
+    printf("%i, %li\n", i, ans);
+
+
 }
