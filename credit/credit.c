@@ -26,10 +26,7 @@ int main(void)
         d = d / 10;
         i++;
     }
-    if (i != 13 && i != 15 && i != 16)
-    {
-        printf("INVALID!\n");
-    }
+
     //printf("%i\n", i);
 
     //invalid test - Luhn’s Algorithm
@@ -79,7 +76,7 @@ int main(void)
     t3_ans = t1_ans + t2_ans;
     //printf("%li\n", t3_ans);
 
-    if (if (i != 13 && i != 15 && i != 16)t3_ans % 10 != 0)
+    if (i != 13 && i != 15 && i != 16 && t3_ans % 10 != 0)
     {
         fd1_ans = ans / pow(10, i-1);
         fd2_ans = ans / pow(10, i-2);
