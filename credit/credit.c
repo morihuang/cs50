@@ -34,11 +34,11 @@ int main(void)
     int j;
     int t_ans = 0;
     int x_ans = ans;
-    for (j = 1; j < i; j += 2)
+    while (x_ans >= 1)
     {
         x_ans /= 10;
         t_ans += x_ans % 10 * 2;
-        printf("%i\n", t_ans);
+        printf("%i, \n", t_ans);
     }
 
 
