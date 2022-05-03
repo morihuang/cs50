@@ -35,7 +35,7 @@ int main(void)
     int j;
     long t1_ans = 0;
     long t2_ans = 0;
-    int t3_ans = 0;
+    long t3_ans = 0;
     long fd_ans;
     long x_ans = ans;
 
@@ -51,7 +51,7 @@ int main(void)
 
         t3_ans += t1_ans + t2_ans;
     }
-    printf("%i\n", ans);
+    printf("%li,\n", t1_ans, t2_ans, t3_ans);
     if (t3_ans % 10 == 0)
     {
         fd_ans = ans / 10^(i-2);
