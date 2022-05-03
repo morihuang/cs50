@@ -81,10 +81,6 @@ int main(void)
 
     if (t3_ans % 10 != 0)
     {
-        printf("INVALID\n");
-    }
-    else
-    {
         fd1_ans = ans / pow(10, i-1);
         fd2_ans = ans / pow(10, i-2);
         //printf("%li\n", fd_ans);
@@ -104,5 +100,9 @@ int main(void)
         {
             printf("INVALID\n");
         }
+    }
+    else
+    {
+        printf("INVALID\n");
     }
 }
