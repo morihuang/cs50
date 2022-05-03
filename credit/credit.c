@@ -31,16 +31,17 @@ int main(void)
     }
 
     //invalid test - Luhn’s Algorithm
+    int j;
     int t_ans = 0;
+    int x_ans = ans;
     for (j = 1; j < i; j += 2)
     {
-        t_ans += (ans % 10^i) * 2;
+        x_ans /= 10;
+        t_ans += x_ans % 10 * 2;
         printf("%i\n", t_ans);
     }
-    printf("%i\n", t_ans);
 
-    int x = 456 / 10;
-    printf("%i\n", x);
+
 
 
 }
