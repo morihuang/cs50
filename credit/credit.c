@@ -29,7 +29,7 @@ int main(void)
     {
         printf("INVALID\n");
     }
-    printf("%li\n", ans);
+    printf("%i\n", i);
 
     //invalid test - Luhn’s Algorithm
     int j;
