@@ -39,7 +39,8 @@ int main(void)
     long t2_ans = 0;
     long t3_ans = 0;
     long t4_ans = 0;
-    long fd_ans;
+    long fd1_ans;
+    long fd2_ans;
     long x_ans = ans;
 
 
@@ -84,18 +85,18 @@ int main(void)
     }
     else
     {
-        fd_ans = ans / pow(10, i-2);
+        fd1_ans = ans / pow(10, i-1);
+        fd2_ans = ans / pow(10, i-2);
         //printf("%li\n", fd_ans);
-        if (fd_ans == 34 || fd_ans == 37)
+        if (fd2_ans == 34 || fd2_ans == 37)
         {
             printf("AMEX\n");
         }
-        else if (fd_ans >= 51 && fd_ans <= 55)
+        else if (fd2_ans >= 51 && fd2_ans <= 55)
         {
             printf("MASTERCARD\n");
         }
-        fd_ans = ans / pow(10, i-1);
-        if (fd_ans == 4)
+        else if (fd1_ans == 4)
         {
             printf("VISA\n");
         }
