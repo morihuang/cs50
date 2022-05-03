@@ -76,7 +76,7 @@ int main(void)
         //printf("%li, %li\n", t1_ans, t2_ans);
     }
     t3_ans = t1_ans + t2_ans;
-    //printf("%li\n", t3_ans);
+    printf("%li\n", t3_ans);
 
     if (t3_ans % 10 != 0)
     {
@@ -99,14 +99,6 @@ int main(void)
         {
             printf("VISA\n");
         }
+        
     }
-
-
-
-
-
-
-
-
-
 }
