@@ -50,6 +50,7 @@ int main(void)
 
         t3_ans += t1_ans + t2_ans;
     }
+    check50 cs50/problems/2022/x/credit
     if (t3_ans % 10 == 0)
     {
         fd_ans = ans / 10^(i-2);
@@ -57,11 +58,11 @@ int main(void)
         {
             printf("AMEX\n");
         }
-        elif (fd_ans >= 51 && fd_ans <= 55)
+        else if (fd_ans >= 51 && fd_ans <= 55)
         {
             printf("MASTERCARD\n");
         }
-        elif (fd_ans == 4)
+        else if (fd_ans == 4)
         {
             printf("VISA\n");
         }
