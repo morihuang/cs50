@@ -3,6 +3,7 @@
 
 int main(void)
 {
+    /*
     long ans;
     do
     {
@@ -11,5 +12,9 @@ int main(void)
     while (ans < 1e12 && 1e13 <= ans && ans < 1e14 && ans > 1e16);
 
     printf("%li\n", ans);
+
+*/
+
+    long ans = get_long("Number: ");
 
 }
