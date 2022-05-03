@@ -37,6 +37,7 @@ int main(void)
     long t1_ans = 0;
     long t2_ans = 0;
     long t3_ans = 0;
+    long t4_ans = 0;
     long fd_ans;
     long x_ans = ans;
 
@@ -51,7 +52,8 @@ int main(void)
         t2_ans = (x_ans / (long) pow(10, j-1)) % 10;
 
         t3_ans += t1_ans * 2 + t2_ans;
-        printf("%li, %li, %li, %i\n", t1_ans, t2_ans, t3_ans, j);
+        t4_ans = t1_ans * 2 + t2_ans;
+        printf("%li, %li, %li, %li, %i\n", t1_ans, t2_ans, t3_ans, t4_ans, j);
     }
 
     if (t3_ans % 10 == 0)
