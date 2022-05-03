@@ -50,8 +50,9 @@ int main(void)
         t2_ans = (x_ans / 10^j-1) % 10;
 
         t3_ans += t1_ans + t2_ans;
+        printf("%li, %li, %li\n", t1_ans, t2_ans, t3_ans);
     }
-    printf("%li, %li, %li\n", t1_ans, t2_ans, t3_ans);
+
     if (t3_ans % 10 == 0)
     {
         fd_ans = ans / 10^(i-2);
