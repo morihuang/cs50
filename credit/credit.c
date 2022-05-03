@@ -32,13 +32,36 @@ int main(void)
 
     //invalid test - Luhn’s Algorithm
     int j;
-    long t_ans = 0;
+    long t1_ans = 0;
+    long t2_ans = 0;
+    int t3_ans = 0;
     long x_ans = ans;
+
+
     for (j = 1; j < i; j += 2)
     {
-        t_ans += (x_ans / 10^j) % 10 * 2;
-        printf("%li, %li\n", x_ans, t_ans);
+        //even digit * 2
+        t1_ans = (x_ans / 10^j) % 10 * 2;
+        //printf("%li, %li\n", x_ans, t_ans);
+
+        //odd digit
+        t2_ans = (x_ans / 10^j-1) % 10;
+
+        t3_ans += t1_ans + t2_ans;
     }
+    if (t3_ans % 10 == 0)
+    {
+        if 
+    }
+    else
+    {
+        printf("INVALID\n")
+    }
+
+
+
+
+
 
 
 
