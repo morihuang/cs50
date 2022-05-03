@@ -4,18 +4,6 @@
 
 int main(void)
 {
-    /*
-    long ans;
-    do
-    {
-        ans = get_long("Number: ");
-    }
-    while (ans < 1e12 && 1e13 <= ans && ans < 1e14 && ans > 1e16);
-
-    printf("%li\n", ans);
-
-*/
-
     long ans = get_long("Number: ");
 
     //invalid test - digit
@@ -43,19 +31,6 @@ int main(void)
 
     for (j = 1; j <= i; j += 2)
     {
-        /*
-        //even digit * 2
-        t1_ans = (x_ans / (long) pow(10, j)) % 10;
-        //printf("%li, %li\n", x_ans, t_ans);
-
-        //odd digit
-        t2_ans = (x_ans / (long) pow(10, j-1)) % 10;
-
-        t3_ans = t1_ans + t2_ans;
-        //t4_ans = t1_ans * 2 + t2_ans;
-        printf("%li, %li, %li, %li, %i\n", t1_ans, t2_ans, t3_ans, t4_ans, j);*/
-
-
         //even digit * 2
         t11_ans = (x_ans / (long) pow(10, j)) % 10;
         t11_ans *= 2;
