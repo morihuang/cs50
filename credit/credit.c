@@ -35,6 +35,7 @@ int main(void)
     for (i = 1; (ans % 10 ^ i) < 10; i += 2)
     {
         t_ans += (ans % 10^i) * 2;
+        printf("%i\n", t_ans);
     }
     printf("%i\n", t_ans);
 
