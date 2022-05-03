@@ -29,6 +29,7 @@ int main(void)
     {
         printf("INVALID\n");
     }
+    printf("%i\n", ans);
 
     //invalid test - Luhn’s Algorithm
     int j;
@@ -50,7 +51,7 @@ int main(void)
 
         t3_ans += t1_ans + t2_ans;
     }
-    check50 cs50/problems/2022/x/credit
+    printf("%i\n", ans);
     if (t3_ans % 10 == 0)
     {
         fd_ans = ans / 10^(i-2);
