@@ -30,7 +30,7 @@ int main(void)
     {
         printf("INVALID\n");
     }
-    printf("%i\n", i);
+    //printf("%i\n", i);
 
     //invalid test - Luhn’s Algorithm
     int j;
@@ -81,7 +81,7 @@ int main(void)
     if (t3_ans % 10 == 0)
     {
         fd_ans = ans / pow(10, i-2);
-        printf("%li\n", fd_ans);
+        //printf("%li\n", fd_ans);
         if (fd_ans == 34 || fd_ans == 37)
         {
             printf("AMEX\n");
