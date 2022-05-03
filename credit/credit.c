@@ -93,10 +93,10 @@ int main(void)
         {
             printf("VISA\n");
         }
-        /*else
+        else
         {
             printf("INVALID\n");
-        }*/
+        }
     }
     else
     {
