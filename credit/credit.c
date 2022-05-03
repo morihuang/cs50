@@ -32,13 +32,13 @@ int main(void)
 
     //invalid test - Luhn’s Algorithm
     int j;
-    int t_ans = 0;
-    int x_ans = ans;
+    long t_ans = 0;
+    long x_ans = ans;
     while (x_ans >= 1)
     {
         x_ans /= 10;
         t_ans += x_ans % 10 * 2;
-        printf("%i, \n", t_ans);
+        printf("%li, %li\n", x_ans, t_ans);
     }
 
 
