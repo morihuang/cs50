@@ -35,6 +35,7 @@ int main(void)
     long t1_ans = 0;
     long t2_ans = 0;
     int t3_ans = 0;
+    long fd_ans;
     long x_ans = ans;
 
 
@@ -51,11 +52,23 @@ int main(void)
     }
     if (t3_ans % 10 == 0)
     {
-        if 
+        fd_ans = ans / 10^(i-2);
+        if (fd_ans == 34 || fd_ans == 37)
+        {
+            printf("AMEX\n");
+        }
+        elif (fd_ans >= 51 && fd_ans <= 55)
+        {
+            printf("MASTERCARD\n");
+        }
+        elif (fd_ans == 4)
+        {
+            printf("VISA\n");
+        }
     }
     else
     {
-        printf("INVALID\n")
+        printf("INVALID\n");
     }
 
 
