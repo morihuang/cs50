@@ -43,11 +43,11 @@ int main(void)
     for (j = 1; j < i; j += 2)
     {
         //even digit * 2
-        t1_ans = (x_ans / (10^j)) % 10;
+        t1_ans = (x_ans / pow(10, j)) % 10;
         //printf("%li, %li\n", x_ans, t_ans);
 
         //odd digit
-        t2_ans = (x_ans / (10^(j-1))) % 10;
+        t2_ans = (x_ans / pow(10, j-1)) % 10;
 
         t3_ans += t1_ans * 2 + t2_ans;
         printf("%li, %li, %li\n", t1_ans, t2_ans, t3_ans);
