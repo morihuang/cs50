@@ -74,7 +74,7 @@ int main(void)
         //printf("%li, %li\n", t1_ans, t2_ans);
     }
     t3_ans = t1_ans + t2_ans;
-    //printf("%li\n", t3_ans);
+    printf("%li\n", t3_ans);
 
     if (i == 13 || i == 15 || i == 16 || t3_ans % 10 == 0)
     {
