@@ -34,10 +34,9 @@ int main(void)
     int j;
     long t_ans = 0;
     long x_ans = ans;
-    while (x_ans >= 1)
+    for (j = 1; j < i; j += 2)
     {
-        x_ans /= 10;
-        t_ans += x_ans % 10 * 2;
+        t_ans += (x_ans / 10^j) % 10 * 2;
         printf("%li, %li\n", x_ans, t_ans);
     }
 
