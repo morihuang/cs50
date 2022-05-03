@@ -39,8 +39,8 @@ int main(void)
     }
     printf("%i\n", t_ans);
 
-    float x = 45.6 % 10;
-    printf("%f\n", x);
+    int x = 456 / 10;
+    printf("%i\n", x);
 
 
 }
