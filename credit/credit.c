@@ -29,7 +29,7 @@ int main(void)
     {
         printf("INVALID\n");
     }
-    printf("%i\n", ans);
+    printf("%li\n", ans);
 
     //invalid test - Luhn’s Algorithm
     int j;
@@ -51,7 +51,7 @@ int main(void)
 
         t3_ans += t1_ans + t2_ans;
     }
-    printf("%li,\n", t1_ans, t2_ans, t3_ans);
+    printf("%li, %li, %li\n", t1_ans, t2_ans, t3_ans);
     if (t3_ans % 10 == 0)
     {
         fd_ans = ans / 10^(i-2);
