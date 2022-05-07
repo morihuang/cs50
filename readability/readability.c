@@ -20,11 +20,12 @@ int main(void)
     printf("%i words.\n", w);
     printf("%i sentences. \n", s);
 
-    float L = l / w * 100;
-    float S = s / w * 100;
+    float L = (l / (float) w) * 100;
+    float S = (s / (float) w) * 100;
+    float Q = s / w;
     int index = round(0.0588 * L - 0.296 * S - 15.8);
     float x = 0.0588 * L - 0.296 * S - 15.8;
-    printf("%f\n", x);
+    printf("%f, %f, %f, %f\n", x, L ,S, Q);
     if (index >= 16)
     {
         printf("Grade 16+");
