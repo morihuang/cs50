@@ -6,7 +6,8 @@
 
 int main(int argc, string argv[])
 {
-    int len = strlen(argv[1]);
+    string s = argv[1];
+    int len = strlen(s);
     //confirm the number of the string
     if (len != 26)
     {
@@ -30,12 +31,13 @@ int main(int argc, string argv[])
 
 
     //
+
     for (int i = 0; i < len; i++)
     {
         for (int j = 0; j < len; j++)
         {
-            printf("%s, %s\n", argv[1][j], argv[1][i]);
-            if (argv[1][j] == argv[1][i])
+            printf("%c, %c\n", s[j], s[i]);
+            if (s[j] == s[i])
             {
                 printf("Key must not contain repeated characters.\n");
                 break;
