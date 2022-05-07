@@ -18,12 +18,10 @@ int count_letters(string text)
     int j = 0;
     for (int i = 0; i <= n; i++)
     {
-        if (isalpha)
+        if (isalpha(text[i]))
         {
             j++;
         }
     }
-    printf("%i, %i", n, j);
-    n = n - j;
-    return n;
+    return j;
 }
