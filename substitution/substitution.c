@@ -50,11 +50,12 @@ int main(int argc, string argv[])
     //confirm non repeat
     for (int i = 0; i < len; i++)
     {
-        for (int j = 0; j < len; j++)
+        for (int j = i + 1; j < len; j++)
         {
-            printf("%c, %c\n", s[j], s[i]);
+            //printf("%c, %c\n", s[j], s[i]);
             if (s[j] == s[i])
             {
+                printf("%i, %i\n", i, j);
                 printf("Key must not contain repeated characters.\n");
                 return 1;
                 //break;
