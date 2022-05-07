@@ -14,9 +14,10 @@ int main(void)
 int count_letters(string text)
 {
     int n = strlen(text);
-    for (int i = 0, j = 0; i <= n; i++)
+    int j = 0;
+    for (int i = 0; i <= n; i++)
     {
-        if (text[i] == \0)
+        if (text[i] == '\0')
         {
             j++;
         }
