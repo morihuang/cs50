@@ -16,23 +16,23 @@ int main(void)
     int w = count_words(ans);
     int s = count_sentences(ans);
 
-    printf("%i letters.\n", l);
-    printf("%i words.\n", w);
-    printf("%i sentences. \n", s);
+    //printf("%i letters.\n", l);
+    //printf("%i words.\n", w);
+    //printf("%i sentences. \n", s);
 
     float L = (l / (float) w) * 100;
     float S = (s / (float) w) * 100;
     float Q = s / w;
     int index = round(0.0588 * L - 0.296 * S - 15.8);
-    float x = 0.0588 * L - 0.296 * S - 15.8;
-    printf("%f, %f, %f, %f\n", x, L ,S, Q);
+    //float x = 0.0588 * L - 0.296 * S - 15.8;
+    //printf("%f, %f, %f, %f\n", x, L ,S, Q);
     if (index >= 16)
     {
-        printf("Grade 16+");
+        printf("Grade 16+\n");
     }
     else if (index <= 1)
     {
-        printf("Before Grade 1");
+        printf("Before Grade 1\n");
     }
     else
     {
