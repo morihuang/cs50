@@ -9,18 +9,18 @@ int main(int argc, string argv[])
     string s = argv[1];
     int len = strlen(s);
 
-    printf("%s, %i\n", s, len);
+    //printf("%s, %i\n", s, len);
     //printf("%s, %i, %i\n", s, len, ab);
-    for (int i = 0; i < len; i++)
+    /*for (int i = 0; i < len; i++)
     {
         if (isalpha(s[i]))
         {
         printf("yes!\n");
         }
-    }
+    }*/
 
     //confirm the number of the string
-    /*
+
     if (len != 26)
     {
         printf("Key must contain 26 characters.\n");
@@ -28,12 +28,15 @@ int main(int argc, string argv[])
     }
 
     //confirm all alphbets
-    if (isalpha(argv[1]) == 0)
+    for (int i = 0; i < len; i++)
     {
-        printf("Key must only contain alphabetic characters.\n");
+        if (isalpha(s[i]) == 0)
+        {
+            printf("Key must only contain alphabetic characters.\n");
+        }
         return 1;
     }
-
+    /*
     //confirm non repeat
     if (argc != 1)
     {
