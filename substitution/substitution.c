@@ -22,7 +22,7 @@ int main(int argc, string argv[])
     }
 
     //confirm non repeat
-    if (argv[1] == 0)
+    if (argc != 1)
     {
         printf("Usage: ./substitution key\n");
         return 1;
