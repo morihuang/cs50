@@ -22,6 +22,7 @@ int count_letters(string text)
             j++;
         }
     }
+    printf("%i%i", n, j);
     n = n - j;
     return n;
 }
