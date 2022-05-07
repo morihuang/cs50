@@ -10,7 +10,7 @@ int count_sentences(string text);
 
 int main(void)
 {
-    string ans = get_string ("Text: ");
+    string ans = get_string("Text: ");
     //printf("%s\n", ans);
     int l = count_letters(ans);
     int w = count_words(ans);
@@ -58,9 +58,9 @@ int count_letters(string text)
 int count_words(string text)
 {
     int j = 1;
-    for(int i = 0, n = strlen(text); i < n; i++)
+    for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if(isspace(text[i]))
+        if (isspace(text[i]))
         {
             j++;
         }
@@ -71,7 +71,7 @@ int count_words(string text)
 int count_sentences(string text)
 {
     int j = 0;
-    for(int i = 0, n = strlen(text); i < n; i++)
+    for (int i = 0, n = strlen(text); i < n; i++)
     {
         if (text[i] == 33 || text[i] == 46 || text[i] == 63)
         {
