@@ -16,14 +16,15 @@ int main(void)
     int w = count_words(ans);
     int s = count_sentences(ans);
 
-    printf("%i letters.\n", l);
-    printf("%i words.\n", w);
-    printf("%i sentences. \n", s);
+    //printf("%i letters.\n", l);
+    //printf("%i words.\n", w);
+    //printf("%i sentences. \n", s);
 
     float L = l / w * 100;
     float S = s / w * 100;
     int index = round(0.0588 * L - 0.296 * S - 15.8);
-
+    //float x = 0.0588 * L - 0.296 * S - 15.8;
+    //printf("%f\n", x);
     if (index >= 16)
     {
         printf("Grade 16+");
