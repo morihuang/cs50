@@ -21,7 +21,7 @@ int main(void)
 
     float L = l / w * 100;
     float S = s / w * 100;
-    float index = 0.0588 * L - 0.296 * S - 15.8;
+    float index = round(0.0588 * L - 0.296 * S - 15.8);
 
     if (index >= 16)
     {
