@@ -52,10 +52,11 @@ int main(int argc, string argv[])
 
     //all good
     //mapping alphabeta
-    string ans = get_string(")
+    string ans = get_string("plaintext: \n");
 
     for (i = 0; i < len; i++)
     {
+        if (ans[i])
 
     }
 
