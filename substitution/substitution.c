@@ -12,6 +12,9 @@ int main(int argc, string argv[])
     //confirm all alphbets
     if (isalpha(argv[1]) == 0)
     {
-        printf("Key must contain 26 characters.\n");
+        printf("Key must only contain alphabetic characters.\n");
     }
+
+    //confirm non repeat
+    if 
 }
