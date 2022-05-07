@@ -8,9 +8,17 @@ int main(int argc, string argv[])
 {
     string s = argv[1];
     int len = strlen(s);
-    int ab = isalpha(argv[1]);
+
     printf("%s, %i\n", s, len);
-    printf("%s, %i, %i\n", s, len, ab);
+    //printf("%s, %i, %i\n", s, len, ab);
+    for (int i = 0; i < len; i++)
+    {
+        if (isalpha(s[i]))
+        {
+        printf("yes!\n");
+        }
+    }
+
     //confirm the number of the string
     /*
     if (len != 26)
