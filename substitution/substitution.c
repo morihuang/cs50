@@ -38,17 +38,16 @@ int main(int argc, string argv[])
         }
 
     }
-    /*
-    //confirm non repeat
-    if (argc != 1)
+
+    //confirm enter correct
+    if (argc != 2)
     {
         printf("Usage: ./substitution key\n");
         return 1;
     }
 
 
-    //
-
+    //confirm non repeat
     for (int i = 0; i < len; i++)
     {
         for (int j = 0; j < len; j++)
@@ -63,7 +62,7 @@ int main(int argc, string argv[])
         }
     }
     printf("%s\n", s);
-    */
+
     return 0;
 
 }
