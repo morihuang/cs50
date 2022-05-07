@@ -1,5 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
 
 int main(int argc, string argv[])
 {
@@ -16,5 +19,5 @@ int main(int argc, string argv[])
     }
 
     //confirm non repeat
-    if 
+    //for (char i in argv[1], )
 }
