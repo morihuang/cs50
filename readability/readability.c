@@ -17,12 +17,12 @@ int count_letters(string text)
     int j = 0;
     for (int i = 0; i <= n; i++)
     {
-        if (65 >= text[i] || text[i] >= 90 || 122 <= text[i] || text[i] <= 97)
+        if ((65 >= text[i] || text[i] >= 90) || (122 <= text[i] || text[i] <= 97))
         {
             j++;
         }
     }
-    printf("%i%i", n, j);
+    printf("%i, %i", n, j);
     n = n - j;
     return n;
 }
