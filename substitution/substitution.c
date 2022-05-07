@@ -11,6 +11,7 @@ int main(int argc, string argv[])
 
     printf("%s, %i, %i\n", s, len, isalpha(argv[1]));
     //confirm the number of the string
+    /*
     if (len != 26)
     {
         printf("Key must contain 26 characters.\n");
@@ -49,5 +50,5 @@ int main(int argc, string argv[])
     }
     printf("%s\n", s);
     return 0;
-
+    */
 }
