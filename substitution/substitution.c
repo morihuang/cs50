@@ -34,6 +34,7 @@ int main(int argc, string argv[])
     {
         for (int j = 0; j < len; j++)
         {
+            printf("%s, %s\n", argv[1][j], argv[1][i]);
             if (argv[1][j] == argv[1][i])
             {
                 printf("Key must not contain repeated characters.\n");
