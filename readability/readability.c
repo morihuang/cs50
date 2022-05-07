@@ -5,6 +5,7 @@
 
 int count_letters(string text);
 int count_words(string text);
+int count_sentences(string text);
 
 int main(void)
 {
@@ -12,6 +13,7 @@ int main(void)
     //printf("%s\n", ans);
     printf("%i letters.\n", count_letters(ans));
     printf("%i words.\n", count_words(ans));
+    printf("%i sentences. \n", count_sentences(ans));
 }
 
 int count_letters(string text)
