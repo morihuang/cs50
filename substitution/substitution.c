@@ -12,7 +12,7 @@ int main(int argc, string argv[])
     if (len != 26)
     {
         printf("Key must contain 26 characters.\n");
-        return 1;
+        //return 1;
     }
 
     //confirm all alphbets
