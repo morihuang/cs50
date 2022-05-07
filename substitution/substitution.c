@@ -6,6 +6,7 @@
 
 int main(int argc, string argv[])
 {
+    int i; //indicator
     string s = argv[1];
     int len = strlen(s);
 
@@ -17,7 +18,7 @@ int main(int argc, string argv[])
     }
 
     //confirm all alphbets
-    for (int i = 0; i < len; i++)
+    for (i = 0; i < len; i++)
     {
         if (isalpha(s[i]) == 0)
         {
@@ -34,7 +35,7 @@ int main(int argc, string argv[])
     }
 
     //confirm non repeat
-    for (int i = 0; i < len; i++)
+    for (i = 0; i < len; i++)
     {
         for (int j = i + 1; j < len; j++)
         {
@@ -49,6 +50,11 @@ int main(int argc, string argv[])
     }
     printf("%s\n", s);
 
-    return 0;
+    //all good
+    //mapping alphabeta
+    for (i = 0; i < len; i++)
+    {
+        
+    }
 
 }
