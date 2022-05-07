@@ -30,11 +30,13 @@ int main(int argc, string argv[])
     //confirm all alphbets
     for (int i = 0; i < len; i++)
     {
+        //printf("%c\n", s[i]);
         if (isalpha(s[i]) == 0)
         {
             printf("Key must only contain alphabetic characters.\n");
+            return 1;
         }
-        return 1;
+
     }
     /*
     //confirm non repeat
