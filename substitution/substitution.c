@@ -8,6 +8,8 @@ int main(int argc, string argv[])
 {
     string s = argv[1];
     int len = strlen(s);
+
+    printf("%s, %i, %B\n", s, len);
     //confirm the number of the string
     if (len != 26)
     {
