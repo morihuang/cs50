@@ -43,7 +43,7 @@ int main(void)
         //printf("%li, %li\n", x_ans, t_ans);
 
         //odd digit
-        t2_ans += (x_ans / (long) pow(10, j-1)) % 10;
+        t2_ans += (x_ans / (long) pow(10, j - 1)) % 10;
 
         //t4_ans = t1_ans * 2 + t2_ans;
         //printf("%li, %li\n", t1_ans, t2_ans);
@@ -53,8 +53,8 @@ int main(void)
 
     if ((i == 13 || i == 15 || i == 16) && t3_ans % 10 == 0)
     {
-        fd1_ans = ans / pow(10, i-1);
-        fd2_ans = ans / pow(10, i-2);
+        fd1_ans = ans / pow(10, i - 1);
+        fd2_ans = ans / pow(10, i - 2);
         //printf("%li\n", fd_ans);
         if (fd2_ans == 34 || fd2_ans == 37)
         {
