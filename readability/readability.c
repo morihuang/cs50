@@ -28,5 +28,5 @@ int count_letters(string text)
 
 int count_words(string text)
 {
-    for(int i = 0, n = strlen(text); )
+    for(int i = 0, n = strlen(text); i < n; i++)
 }
