@@ -40,9 +40,12 @@ int main(int argc, string argv[])
             if (s[j] == s[i])
             {
                 printf("Key must not contain repeated characters.\n");
+                return 1;
                 break;
             }
         }
     }
+    printf("%s\n", s);
+    return 0;
 
 }
