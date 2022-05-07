@@ -19,7 +19,7 @@ int main(int argc, string argv[])
     }
 
     //confirm non repeat
-    //for (char i in argv[1], )
-    
+    if ()
+
 
 }
