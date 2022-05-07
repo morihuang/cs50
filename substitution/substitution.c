@@ -19,7 +19,13 @@ int main(int argc, string argv[])
     }
 
     //confirm non repeat
-    if ()
+    if (argv[1] == 0)
+    {
+        printf("Usage: ./substitution key\n");
+    }
+
+    return 1;
+    //
 
 
 }
