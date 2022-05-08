@@ -54,6 +54,11 @@ int main(int argc, string argv[])
     //mapping alphabeta
     string ans = get_string("plaintext: ");
 
+    //sandox
+    char a = 'a';
+    
+
+    /*
     for (i = 0; i < len; i++)
     {
         if (isupper(ans[i]))
@@ -62,5 +67,5 @@ int main(int argc, string argv[])
         }
 
     }
-
+    */
 }
