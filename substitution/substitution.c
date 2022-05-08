@@ -11,12 +11,12 @@ int main(int argc, string argv[])
     int i; //indicator
     string s = argv[1];
     int len = strlen(s);
-
+    printf("%i", argc);
     //confirm the number of the string
     if (len != 26)
     {
         printf("Key must contain 26 characters.\n");
-        //return 1;
+        return 1;
     }
 
     //confirm all alphbets
