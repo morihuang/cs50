@@ -56,7 +56,8 @@ int main(int argc, string argv[])
 
     //sandox
     char a = 'a';
-    
+    int x = 65;
+    printf("%c\n", x);
 
     /*
     for (i = 0; i < len; i++)
