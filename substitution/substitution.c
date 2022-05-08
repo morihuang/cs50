@@ -4,6 +4,7 @@
 #include <ctype.h>
 
 int encipher_upper_index(string x, int y);
+int encipher_lower_index(string x, int y);
 
 int main(int argc, string argv[])
 {
@@ -65,8 +66,21 @@ int main(int argc, string argv[])
 
     for (i = 0; i < len_ans; i++)
     {
-        printf("%i\n", encipher_upper_index(ans, i));
-        printf("%c\n", s[encipher_upper_index(ans, i)]);
+        if (isupper(ans[i]))
+        {
+            printf("%c", s[encipher_upper_index(ans, i)]);
+        }
+
+        else if (islower(ans[i]))
+        {
+            printf("%c", s[encipher_lower_index(ans, i)]);
+        }
+
+        else
+        {
+            printf("%c", ans[i]);
+        }
+
 
 
         /*
@@ -76,13 +90,18 @@ int main(int argc, string argv[])
         }
         */
     }
-
+    printf("\n");
 
 }
 
 int encipher_upper_index(string x, int y)
 {
     int ki = (int) x[y] - 65;
-    printf("x[y])
+    return ki;
+}
+
+int encipher_lower_index(string x, int y)
+{
+    int ki = (int) x[y] - 97;
     return ki;
 }
