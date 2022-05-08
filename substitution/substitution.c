@@ -57,14 +57,14 @@ int main(int argc, string argv[])
     //sandox
     char a = 'a';
     int x = 65;
-    printf("%c\n", x);
+    printf("%c, %i\n", x, (int) ans);
 
-
+    /*
     int len_ans = strlen(ans);
     for (i = 0; i < len_ans; i++)
     {
-        
-    }
+
+    }*/
 
     /*
     for (i = 0; i < len; i++)
