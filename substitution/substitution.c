@@ -101,7 +101,8 @@ int main(int argc, string argv[])
 int encipher_upper_index(string x, int y, string s)
 {
     int ki = (int) x[y] - 65;
-    return s[ki];
+    char z = toupper(s[ki]);
+    return z;
 }
 
 int encipher_lower_index(string x, int y, string s)
