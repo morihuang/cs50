@@ -44,7 +44,7 @@ int main(int argc, string argv[])
             //printf("%c, %c\n", s[j], s[i]);
             if (s[j] == s[i])
             {
-                printf("%i, %i\n", i, j);
+                //printf("%i, %i\n", i, j);
                 printf("Key must not contain repeated characters.\n");
                 return 1;
             }
@@ -60,13 +60,13 @@ int main(int argc, string argv[])
     //sandox
     char a = 'a';
     int x = 65;
-    printf("%c, %s, %i\n", x, ans, (int) ans);
+    //printf("%c, %s, %i\n", x, ans, (int) ans);
 
     //encipher
 
     for (i = 0; i < len_ans; i++)
     {
-        printf("%i, %i, %i", i, (int) isupper(ans[i]), islower(ans[i]));
+        printf("%i, %i, %i", i, (int) isupper(ans[i]), (int) islower(ans[i]));
         if (isupper(ans[i]))
         {
             printf("%c", s[encipher_upper_index(ans, i)]);
