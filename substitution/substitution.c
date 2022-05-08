@@ -3,6 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
+int encipher_upper_index(string x);
 
 int main(int argc, string argv[])
 {
@@ -48,32 +49,39 @@ int main(int argc, string argv[])
             }
         }
     }
-    printf("%s\n", s);
+    //printf("%s\n", s);
 
     //all good
     //mapping alphabeta
     string ans = get_string("plaintext: ");
+    int len_ans = strlen(ans);
 
     //sandox
     char a = 'a';
     int x = 65;
     printf("%c, %s, %i\n", x, ans, (int) ans);
 
+    //encipher
 
-    int len_ans = strlen(ans);
     for (i = 0; i < len_ans; i++)
     {
-        printf("%i\n", (int) ans[i]);
-    }
+        printf("%c", s[encipher_upper_index(ans)]);
 
-    /*
-    for (i = 0; i < len; i++)
-    {
+
+        /*
         if (isupper(ans[i]))
         {
-            printf("Yes!\n");
-        }
 
+        }
+        */
     }
-    */
+
+
+}
+
+int encipher_upper_index(string x)
+{
+    int i = 0;
+    int ki = (int) x[i] - 65;
+    return ki;
 }
