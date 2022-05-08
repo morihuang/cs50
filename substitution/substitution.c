@@ -70,12 +70,14 @@ int main(int argc, string argv[])
         printf("%i, %i, %i, %c, ", i, (int) isupper(ans[i]), (int) islower(ans[i]), ans[i]);
         if (isupper(ans[i]))
         {
-            printf("%c", s[encipher_upper_index(ans, i)]);
+            //printf("%c", s[encipher_upper_index(ans, i)]);
+            printf("%c", encipher_upper_index(ans, i));
         }
 
         else if (islower(ans[i]))
         {
-            printf("%c", s[encipher_lower_index(ans, i)]);
+            //printf("%c", s[encipher_lower_index(ans, i)]);
+            printf("%c", encipher_lower_index(ans, i));
         }
 
         else
@@ -99,11 +101,12 @@ int main(int argc, string argv[])
 int encipher_upper_index(string x, int y)
 {
     int ki = (int) x[y] - 65;
-    return ki;
+    return s[ki];
 }
 
 int encipher_lower_index(string x, int y)
 {
     int ki = (int) x[y] - 97;
-    return ki;
+    z = tolower(s[ki]);
+    return s[ki];
 }
