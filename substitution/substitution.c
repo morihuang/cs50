@@ -11,7 +11,7 @@ int main(int argc, string argv[])
     int i; //indicator
     string s = argv[1];
     int len = strlen(s);
-    printf("%i", argc);
+    printf("%i, %s", argc, argv[1]);
 
     //confirm enter correct
     /*
