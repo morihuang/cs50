@@ -8,19 +8,16 @@ int encipher_lower_index(string x, int y, string s);
 
 int main(int argc, string argv[])
 {
-    int i; //indicator
-    string s = argv[1];
-    int len = strlen(s);
-    printf("%i, %s", argc, argv[1]);
-
     //confirm enter correct
-    /*
     if (argc != 2)
     {
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    */
+
+    int i; //indicator
+    string s = argv[1];
+    int len = strlen(s);
 
     //confirm the number of the string
     if (len != 26)
