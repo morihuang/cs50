@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-int encipher_upper_index(string x);
+int encipher_upper_index(string x, int y);
 
 int main(int argc, string argv[])
 {
@@ -65,7 +65,8 @@ int main(int argc, string argv[])
 
     for (i = 0; i < len_ans; i++)
     {
-        printf("%c", s[encipher_upper_index(ans)]);
+        printf("%i\n", encipher_upper_index(ans, i));
+        printf("%c\n", s[encipher_upper_index(ans, i)]);
 
 
         /*
@@ -79,9 +80,8 @@ int main(int argc, string argv[])
 
 }
 
-int encipher_upper_index(string x)
+int encipher_upper_index(string x, int y)
 {
-    int i = 0;
-    int ki = (int) x[i] - 65;
+    int ki = (int) x[y] - 65;
     return ki;
 }
