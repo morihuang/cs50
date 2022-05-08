@@ -11,7 +11,15 @@ int main(int argc, string argv[])
     int i; //indicator
     string s = argv[1];
     int len = strlen(s);
-    printf("%i", argc);
+    //printf("%i", argc);
+
+    //confirm enter correct
+    if (argc != 2)
+    {
+        printf("Usage: ./substitution key\n");
+        return 1;
+    }
+
     //confirm the number of the string
     if (len != 26)
     {
@@ -27,13 +35,6 @@ int main(int argc, string argv[])
             printf("Key must only contain alphabetic characters.\n");
             return 1;
         }
-    }
-
-    //confirm enter correct
-    if (argc != 2)
-    {
-        printf("Usage: ./substitution key\n");
-        return 1;
     }
 
     //confirm non repeat
