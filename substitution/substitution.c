@@ -41,42 +41,30 @@ int main(int argc, string argv[])
     {
         for (int j = i + 1; j < len; j++)
         {
-            //printf("%c, %c\n", s[j], s[i]);
             if (s[j] == s[i])
             {
-                //printf("%i, %i\n", i, j);
                 printf("Key must not contain repeated characters.\n");
                 return 1;
             }
         }
     }
-    //printf("%s\n", s);
 
     //all good
     //mapping alphabeta
     string ans = get_string("plaintext: ");
     int len_ans = strlen(ans);
 
-    //sandox
-    char a = 'a';
-    int x = 65;
-    //printf("%c, %s, %i\n", x, ans, (int) ans);
-
     //encipher
     printf("ciphertext: ");
     for (i = 0; i < len_ans; i++)
     {
-
-        //printf("%i, %i, %i, %c, ", i, (int) isupper(ans[i]), (int) islower(ans[i]), ans[i]);
         if (isupper(ans[i]))
         {
-            //printf("%c", s[encipher_upper_index(ans, i)]);
             printf("%c", encipher_upper_index(ans, i, s));
         }
 
         else if (islower(ans[i]))
         {
-            //printf("%c", s[encipher_lower_index(ans, i)]);
             printf("%c", encipher_lower_index(ans, i, s));
         }
 
@@ -84,15 +72,6 @@ int main(int argc, string argv[])
         {
             printf("%c", ans[i]);
         }
-        //printf("\n");
-
-
-        /*
-        if (isupper(ans[i]))
-        {
-
-        }
-        */
     }
     printf("\n");
 
