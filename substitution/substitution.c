@@ -83,5 +83,6 @@ int main(int argc, string argv[])
 int encipher_upper_index(string x, int y)
 {
     int ki = (int) x[y] - 65;
+    printf("x[y])
     return ki;
 }
