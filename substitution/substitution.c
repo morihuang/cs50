@@ -66,6 +66,7 @@ int main(int argc, string argv[])
 
     for (i = 0; i < len_ans; i++)
     {
+        printf("%i, %i, %i", i, (int) isupper(ans[i]), islower(ans[i]));
         if (isupper(ans[i]))
         {
             printf("%c", s[encipher_upper_index(ans, i)]);
