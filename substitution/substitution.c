@@ -3,8 +3,8 @@
 #include <string.h>
 #include <ctype.h>
 
-int encipher_upper_index(string x, int y);
-int encipher_lower_index(string x, int y);
+int encipher_upper_index(string x, int y, string s);
+int encipher_lower_index(string x, int y, string s);
 
 int main(int argc, string argv[])
 {
@@ -71,13 +71,13 @@ int main(int argc, string argv[])
         if (isupper(ans[i]))
         {
             //printf("%c", s[encipher_upper_index(ans, i)]);
-            printf("%c", encipher_upper_index(ans, i));
+            printf("%c", encipher_upper_index(ans, i, s));
         }
 
         else if (islower(ans[i]))
         {
             //printf("%c", s[encipher_lower_index(ans, i)]);
-            printf("%c", encipher_lower_index(ans, i));
+            printf("%c", encipher_lower_index(ans, i, s));
         }
 
         else
@@ -98,15 +98,15 @@ int main(int argc, string argv[])
 
 }
 
-int encipher_upper_index(string x, int y)
+int encipher_upper_index(string x, int y, string s)
 {
     int ki = (int) x[y] - 65;
     return s[ki];
 }
 
-int encipher_lower_index(string x, int y)
+int encipher_lower_index(string x, int y, string s)
 {
     int ki = (int) x[y] - 97;
-    z = tolower(s[ki]);
-    return s[ki];
+    char z = tolower(s[ki]);
+    return z;
 }
