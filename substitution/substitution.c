@@ -63,7 +63,7 @@ int main(int argc, string argv[])
     //printf("%c, %s, %i\n", x, ans, (int) ans);
 
     //encipher
-
+    printf("ciphertext: ");
     for (i = 0; i < len_ans; i++)
     {
 
