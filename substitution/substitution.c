@@ -81,7 +81,7 @@ int main(int argc, string argv[])
         {
             printf("%c", ans[i]);
         }
-
+        printf("\n");
 
 
         /*
