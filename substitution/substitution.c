@@ -59,7 +59,9 @@ int main(int argc, string argv[])
     int x = 65;
     printf("%c\n", x);
 
-    for (i = 65; i < 91; i++)
+
+    int len_ans = strlen(ans);
+    for (i = 0; i < len_ans; i++)
     {
         
     }
