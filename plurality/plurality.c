@@ -74,11 +74,13 @@ bool vote(string name)
             candidates[i].votes++;
             return true;
         }
+
+        else
+        {
+            return false;
+        }
     }
-    else
-    {
-        return false;
-    }
+    return;
 }
 
 // Print the winner (or winners) of the election
