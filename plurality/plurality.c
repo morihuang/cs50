@@ -58,7 +58,7 @@ int main(int argc, string argv[])
             printf("Invalid vote.\n");
         }
     }
-    
+
     // Display winner of election
     print_winner();
 }
@@ -77,7 +77,7 @@ bool vote(string name)
             break;
         }
     }
-    return true;
+    return false;
 }
 
 // Print the winner (or winners) of the election
