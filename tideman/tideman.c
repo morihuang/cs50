@@ -109,8 +109,6 @@ bool vote(int rank, string name, int ranks[])
             return true;
         }
     }
-
-
     return false;
 }
 
@@ -118,6 +116,7 @@ bool vote(int rank, string name, int ranks[])
 void record_preferences(int ranks[])
 {
     // TODO
+    
     return;
 }
 
