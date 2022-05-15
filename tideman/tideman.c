@@ -132,7 +132,7 @@ void add_pairs(void)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = 0; j < candidate_count; j++)
+        for (int j = i + 1; j < candidate_count; j++)
         {
             if (preferences[i][j] > preferences[j][i])
             {
