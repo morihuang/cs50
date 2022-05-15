@@ -159,7 +159,7 @@ void sort_pairs(void)
     int strg[pair_count];
     for (int i = 0; i < pair_count; i++)
     {
-        strg[i] = pairs[i].winner - pairs[i].loser;
+        strg[i] = preferences[pairs[i].winner] - preferences[pairs[i].loser];
     }
     while (swap_counter == 0)
     {
