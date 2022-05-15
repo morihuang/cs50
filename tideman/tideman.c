@@ -182,24 +182,24 @@ void sort_pairs(void)
         */
 
 
-    while (swap_counter == 0)
+    /*while (swap_counter == 0)
     {
-        pair temp;
-        swap_counter = 0;
+
+        swap_counter = 0;*/
         for (int i = 0; i < pair_count; i++)
         {
             for (int j = i + 1; j < pair_count; j++)
             {
                 if (preferences[pairs[j].winner][pairs[j].loser] < preferences[pairs[j + 1].winner][pairs[j + 1].loser])
                 {
-                    temp = pairs[j];
+                    pair temp = pairs[j];
                     pairs[j] = pairs[j + 1];
                     pairs[j + 1] = temp;
                     swap_counter++;
                 }
             }
         }
-    }
+
 
 
     return;
