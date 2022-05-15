@@ -157,7 +157,7 @@ void sort_pairs(void)
     // TODO
     int swap_counter = -1;
     int strg[pair_count];
-    for (itn i = 0; i < pair_count; i++)
+    for (int i = 0; i < pair_count; i++)
     {
         strg[i] = pairs[i].winner - pairs[i].loser;
     }
@@ -184,7 +184,7 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // TODO
-    
+    for ()
     return;
 }
 
