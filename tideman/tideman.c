@@ -213,8 +213,7 @@ void print_winner(void)
         if (win_count == 2)
         {
             break;
-            
-            printf("%)
+            printf("%s", candidates[i]);
         }
     }
     return;
