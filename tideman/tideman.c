@@ -155,11 +155,11 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-
+/*
     int swap_counter = -1;
     while (swap_counter == 0)
     {
-        swap_counter = 0;
+        swap_counter = 0;*/
         for (int i = 0; i < pair_count; i++)
         {
             for (int j = 0; j < pair_count - 1; j++)
@@ -169,12 +169,12 @@ void sort_pairs(void)
                     pair temp = pairs[j];
                     pairs[j] = pairs[j + 1];
                     pairs[j + 1] = temp;
-                    swap_counter++;
+                    //swap_counter++;
                 }
             }
         }
     return;
-    }
+
 }
 
 // Lock pairs into the candidate graph in order, without creating cycles
