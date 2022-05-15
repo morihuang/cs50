@@ -148,6 +148,7 @@ void add_pairs(void)
             }
         }
     return;
+    }
 }
 
 // Sort pairs in decreasing order by strength of victory
