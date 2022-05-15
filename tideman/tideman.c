@@ -161,7 +161,10 @@ void sort_pairs(void)
         swap_counter = 0;
         for (i = 0; i < pair_count; i++)
         {
-            
+            if (pairs[i] < pairs[i + 1])
+            {
+                
+            }
         }
     }
     return;
