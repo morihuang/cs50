@@ -188,7 +188,7 @@ void lock_pairs(void)
     {
         locked[pairs[i].winner][pairs[i].loser] = true;
     }
-    if (locked[pairs[pair_count - 1].winner][pairs[pair_count - 1].loser])
+    if (locked[pairs[pair_count - 1].winner][pairs[pair_count - 1].winner] != true)
     {
         locked[pairs[pair_count - 1].winner][pairs[pair_count - 1].loser] = true;
     }
@@ -200,5 +200,6 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
+    
     return;
 }
