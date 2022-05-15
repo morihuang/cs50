@@ -156,14 +156,18 @@ void sort_pairs(void)
 {
     // TODO
     int swap_counter = -1;
-    while (swap_counter = 0)
+    while (swap_counter == 0)
     {
+        int temp;
         swap_counter = 0;
-        for (i = 0; i < pair_count; i++)
+        for (int i = 0; i < pair_count; i++)
         {
-            if (pairs[i] < pairs[i + 1])
+            if (pairs[i].winner < pairs[i + 1].winner)
             {
-                
+                temp = pairs[i].winner;
+                pairs[i].winner = pairs[i + 1].winner;
+                pairs[i + 1].winner = temp;
+                swap_counter++;
             }
         }
     }
