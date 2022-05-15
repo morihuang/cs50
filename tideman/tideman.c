@@ -159,7 +159,10 @@ void sort_pairs(void)
     while (swap_counter = 0)
     {
         swap_counter = 0;
-        for (i = 0; )
+        for (i = 0; i < pair_count; i++)
+        {
+            
+        }
     }
     return;
 }
