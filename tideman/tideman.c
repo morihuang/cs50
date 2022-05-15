@@ -182,10 +182,10 @@ void sort_pairs(void)
         */
 
 
-    /*while (swap_counter == 0)
+    while (swap_counter == 0)
     {
 
-        swap_counter = 0;*/
+        swap_counter = 0;
         for (int i = 0; i < pair_count; i++)
         {
             for (int j = 0; j < pair_count - 1; j++)
