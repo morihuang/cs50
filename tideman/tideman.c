@@ -199,10 +199,23 @@ void lock_pairs(void)
 // Print the winner of the election
 void print_winner(void)
 {
+    int win_count = 0;
     // TODO
     for (int i = 0; i < pair_count - 1; i++)
     {
-        
+        for (int j = 0; j < pair_count - 1; i++)
+        {
+            if (true)
+            {
+                win_count++;
+            }
+        }
+        if (win_count == 2)
+        {
+            break;
+            
+            printf("%)
+        }
     }
     return;
 }
