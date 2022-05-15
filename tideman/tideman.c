@@ -170,9 +170,9 @@ void sort_pairs(void)
 
             if (strg[i] < strg[i + 1])
             {
-                temp = strg[i];
-                strg[i] = strg[i + 1];
-                strg[i + 1] = temp;
+                temp = pairs[i].winner;
+                pairs[i].winner = pairs[i + 1].winner;
+                pairs[i + 1].winner = temp;
                 swap_counter++;
             }
         }
@@ -184,7 +184,10 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // TODO
-    for ()
+    for (int i = 0; i < pair_count; i++)
+    {
+        
+    }
     return;
 }
 
