@@ -155,7 +155,12 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-    
+    int swap_counter = -1;
+    while (swap_counter = 0)
+    {
+        swap_counter = 0;
+        for (i = 0; )
+    }
     return;
 }
 
