@@ -214,9 +214,9 @@ void print_winner(void)
 {
     int win_count = 0;
     // TODO
-    for (int i = 0; i < pair_count - 1; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = 0; j < pair_count - 1; i++)
+        for (int j = 0; j < candidate_count; i++)
         {
             if (true)
             {
