@@ -172,6 +172,16 @@ void sort_pairs(void)
 }
 
 // Lock pairs into the candidate graph in order, without creating cycles
+bool cycle_check (int tail, int head)
+{
+    if (tail == head)
+    {
+        return 1;
+    }
+
+    for ()
+}
+
 void lock_pairs(void)
 {
     // TODO
