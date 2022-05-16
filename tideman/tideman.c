@@ -195,11 +195,12 @@ void lock_pairs(void)
     // TODO
     for (int i = 0; i < pair_count - 1; i++)
     {
-        if (!cycle_check)
+        if (!cycle_check(pairs[i].winner, pairs[i].loser))
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
     return;
+    }
 }
 
 // Print the winner of the election
