@@ -1,21 +1,22 @@
-sort1 uses: TODO
+sort1 uses: bubble sort
 
-How do you know?: TODO
+How do you know?: Since there are only three types of sorting algorithm. Sort1 has performed equally the same with sort3 and has taken longer time comparaed with sort2.
+In addition with the considerable decrease of time in sorted samples. Therefore, we could conclude that the sort1 is bubble sort.
 
-sort2 uses: TODO
+sort2 uses: merge sort
 
-How do you know?: TODO
+How do you know?: Sort2 has the smallest time consumed across the reversed, random, and sorted samples. Which leads to the conclusion that sort2 is merge sort.
 
-sort3 uses: TODO
+sort3 uses: selection sort
 
-How do you know?: TODO
-
-
-
+How do you know?: Since selection sort has  no difference between worst-case and best-case scenario. Plus its highest time consumed characteristic. We could conclude that sort3 is selection sort.
 
 
 
-time ./sort1 reversed10000.txt
+
+
+
+time ./sort1 reversed10000.txt  bubble sort
 real    0m0.260s
 user    0m0.194s
 sys     0m0.039s
@@ -25,7 +26,7 @@ real    0m0.078s
 user    0m0.014s
 sys     0m0.021s
 
-time ./sort3 reversed10000.txt
+time ./sort3 reversed10000.txt  selection sort
 real    0m0.221s
 user    0m0.110s
 sys     0m0.047s
