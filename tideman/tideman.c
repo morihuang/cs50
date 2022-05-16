@@ -193,7 +193,7 @@ bool cycle_check (int tail, int head)
 void lock_pairs(void)
 {
     // TODO
-    for (int i = 0; i < pair_count - 1; i++)
+    for (int i = 0; i < pair_count; i++)
     {
         if (!cycle_check(pairs[i].loser, pairs[i].winner))
         {
