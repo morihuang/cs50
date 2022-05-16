@@ -195,7 +195,7 @@ void lock_pairs(void)
     // TODO
     for (int i = 0; i < pair_count - 1; i++)
     {
-        if (!cycle_check(pairs[i].winner, pairs[i].loser))
+        if (!cycle_check(pairs[i].loser, pairs[i].winner))
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
