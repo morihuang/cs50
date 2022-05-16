@@ -193,7 +193,7 @@ bool cycle_check (int tail, int head)
         }
     }
 
-    return 0;
+    return 0./sort1 reversed10000.txt;
 }
 
 void lock_pairs(void)
