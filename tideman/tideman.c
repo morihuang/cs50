@@ -182,7 +182,7 @@ bool cycle_check (int tail, int head)
 {
     if (tail == head)
     {
-        return true;
+        return 1;
     }
 
     for (int i = 0; i < candidate_count; i++)
@@ -193,7 +193,7 @@ bool cycle_check (int tail, int head)
         }
     }
 
-    return false;
+    return 0;
 }
 
 void lock_pairs(void)
