@@ -179,7 +179,7 @@ bool cycle_check (int tail, int head)
         return 1;
     }
 
-    for (int i = 0; i < pair_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (locked[tail][i])
         {
