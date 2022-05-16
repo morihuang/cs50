@@ -25,9 +25,39 @@ real    0m0.078s
 user    0m0.014s
 sys     0m0.021s
 
-time ./sort3 reversed10000.txt  
+time ./sort3 reversed10000.txt
 real    0m0.221s
 user    0m0.110s
 sys     0m0.047s
 
 
+time ./sort1 random10000.txt
+real    0m0.387s
+user    0m0.254s
+sys     0m0.043s
+
+time ./sort2 random10000.txt
+real    0m0.088s
+user    0m0.014s
+sys     0m0.028s
+
+time ./sort3 random10000.txt
+real    0m0.187s
+user    0m0.097s
+sys     0m0.042s
+
+
+time ./sort1 sorted10000.txt
+real    0m0.107s
+user    0m0.006s
+sys     0m0.037s
+
+time ./sort2 sorted10000.txt
+real    0m0.080s
+user    0m0.007s
+sys     0m0.037s
+
+time ./sort3 sorted10000.txt
+real    0m0.160s
+user    0m0.116s
+sys     0m0.025s
