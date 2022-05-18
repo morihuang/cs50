@@ -231,7 +231,6 @@ void print_winner(void)
             if (winner == true)
             {
                 printf("%s\n", candidates[i]);
-                break;
             }
             }
         }
