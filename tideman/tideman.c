@@ -216,18 +216,25 @@ void print_winner(void)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
+        bool winner = true;
         for (int j = 0; j < candidate_count; i++)
         {
             if (locked[j][i] == true)
             {
+                winner = false;
                 break;
             }
-            else
+        }
+
+        if (winner == true)
+        {
+            printf("%s", candidates[i]);
         }
     }
+    return;
+}
 
-
-
+/*
 
             if (true)
             {
@@ -242,3 +249,4 @@ void print_winner(void)
     }
     return;
 }
+*/
