@@ -218,6 +218,12 @@ void print_winner(void)
     {
         for (int j = 0; j < candidate_count; i++)
         {
+            if (locked[j][i] == true)
+            {}
+
+
+
+
             if (true)
             {
                 win_count++;
