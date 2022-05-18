@@ -89,7 +89,7 @@ int main(int argc, string argv[])
 
         printf("\n");
     }
-
+    printf("%i\n", preferences)
     add_pairs();
     sort_pairs();
     lock_pairs();
