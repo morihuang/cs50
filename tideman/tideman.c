@@ -212,7 +212,6 @@ void lock_pairs(void)
 // Print the winner of the election
 void print_winner(void)
 {
-    int win_count = 0;
     // TODO
 
 
@@ -234,8 +233,7 @@ void print_winner(void)
             }
             }
         }
-
-    return;
+        return;
 }
 
 /*
