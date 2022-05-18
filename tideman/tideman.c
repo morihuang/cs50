@@ -155,7 +155,7 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-int swap_count = 1;
+    int swap_count = 1;
     while (swap_count != 0)
     {
         swap_count = 0;
