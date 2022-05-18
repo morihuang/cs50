@@ -214,22 +214,24 @@ void print_winner(void)
 {
     int win_count = 0;
     // TODO
-    for (int i = 0; i < candidate_count; i++)
+    bool winner = false;
+    while (!winner)
     {
-        bool winner = true;
-        for (int j = 0; j < candidate_count; j++)
-        {
-            if (locked[j][i] == true)
+        for (int i = 0; i < candidate_count; i++)
+            for (int j = 0; j < candidate_count; j++)
             {
-                winner = false;
-                break;
-            }
-        }
+                if (locked[j][i] == true)
+                {
+                    winner = false;
 
-        if (winner == true)
-        {
-            printf("%s", candidates[i]);
-        }
+                }
+            }
+
+
+    }
+    if (winner == true)
+    {
+        printf("%s", candidates[i]);
     }
     return;
 }
