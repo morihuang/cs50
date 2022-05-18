@@ -175,7 +175,7 @@ void sort_pairs(void)
 }
 
 // Lock pairs into the candidate graph in order, without creating cycles
-bool cycle_check (int head, int tail)
+bool cycle_check(int head, int tail)
 {
     if (tail == head)
     {
@@ -213,27 +213,29 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
-
-
-        for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
+    {
+        bool wins = true;
+        for (int j = 0; j < candidate_count; j++)
         {
-            bool wins = true;
-            for (int j = 0; j < candidate_count; j++)
+            if (locked[j][i])
             {
-                if (locked[j][i])
-                {
-                    wins = false;
-                    break;
-                }
-            }
-
-            if (!wins) continue;
-            if (wins == true)
-            {
-                printf("%s\n", candidates[i]);
+                wins = false;
+                break;
             }
         }
-        return;
+
+        if (!wins)
+        {
+            continue;
+        }
+        
+        if (wins == true)
+        {
+            printf("%s\n", candidates[i]);
+        }
+    }
+    return;
 }
 
 /*
