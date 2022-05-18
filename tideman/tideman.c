@@ -186,7 +186,10 @@ bool cycle_check (int tail, int head)
     {
         if (locked[tail][i])
         {
-            return cycle_check(head, i);
+            if (cycle_check(head, i));
+            {
+                return 1;
+            }
         }
     }
 
