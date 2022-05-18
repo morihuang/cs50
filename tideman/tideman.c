@@ -225,14 +225,14 @@ void print_winner(void)
                 if (locked[j][i] == true)
                 {
                     winner = false;
-                    break;
                 }
-            }
+
 
             if (winner == true)
             {
                 printf("%s", candidates[i]);
                 break;
+            }
             }
         }
     }
