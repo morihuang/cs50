@@ -229,7 +229,7 @@ void print_winner(void)
             if (!winner) continue;
             if (winner == true)
             {
-                printf("%s", candidates[i]);
+                printf("%s\n", candidates[i]);
                 break;
             }
             }
