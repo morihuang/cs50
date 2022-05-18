@@ -226,7 +226,7 @@ void print_winner(void)
                     winner = false;
                 }
 
-
+            if (!winner) continue;
             if (winner == true)
             {
                 printf("%s", candidates[i]);
