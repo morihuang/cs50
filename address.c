@@ -18,6 +18,7 @@ int main(void)
     char c = s[0];
     char *p = &c;
     //char *s = "HI!";
+    printf("%p\n", s);
     printf("%p\n", p);
     //printf("%s\n", s);
     //printf("%s\n", s);
