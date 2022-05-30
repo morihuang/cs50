@@ -22,6 +22,6 @@ int main(void)
     printf("%p\n", p);
     printf("%p\n", s);
 
-    //printf("%s\n", s);
-    //printf("%s\n", s);
+    printf("%s\n", s);
+    printf("%s\n", p);
 }
