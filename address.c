@@ -17,5 +17,5 @@ int main(void)
     //string s = "HI!";
     char *s = "HI!";
     printf("%s\n", s);
-    printf("%s\n", c);
+    printf("%s\n", s);
 }
