@@ -15,11 +15,13 @@ int main(void)
 int main(void)
 {
     string s = "HI!";
-    char c = s[0];
-    char *p = &c;
+    //char c = s[0];
+    char *p = &s[0];
+    //char *p = &c;
     //char *s = "HI!";
-    printf("%p\n", s);
     printf("%p\n", p);
+    printf("%p\n", s);
+
     //printf("%s\n", s);
     //printf("%s\n", s);
 }
