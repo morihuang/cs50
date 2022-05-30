@@ -29,11 +29,8 @@ int main(void)
     char *p = &s[0];
     //char *p = &c;
     //char *s = "HI!";
+
     printf("%p\n", p);
     printf("%p\n", s);
-    printf("%p\n", &s[0]);
-
-    printf("%s\n", s);
-    printf("%c\n", *p);
 
 }
