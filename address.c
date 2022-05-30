@@ -14,7 +14,7 @@ int main(void)
 
 int main(void)
 {
-    //string s = "HI!";
+    string s = "HI!";
     char *s = "HI!";
     printf("%s\n", s);
     printf("%s\n", s);
