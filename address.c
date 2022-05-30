@@ -34,6 +34,6 @@ int main(void)
     printf("%p\n", &s[0]);
 
     printf("%s\n", s);
-    printf("%s\n", p);
+    printf("%c\n", *p);
 
 }
