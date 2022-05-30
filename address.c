@@ -21,6 +21,7 @@ int main(void)
     //char *s = "HI!";
     printf("%p\n", p);
     printf("%p\n", s);
+    printf("%p\n", &s[0]);
 
     printf("%s\n", s);
     printf("%s\n", p);
