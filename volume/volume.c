@@ -36,9 +36,9 @@ int main(int argc, char *argv[])
     // TODO: Copy header from input file to output file
     uint8_t header[HEADER_SIZE];
 
-    size_t ret = fread(header, HEADER_SIZE, sizeof(*header), input);
+    size_t ret = fread(&header, HEADER_SIZE, sizeof(*header), input);
 
-    fwrite(header, HEADER_SIZE, sizeof(*header), output);
+    fwrite(&header, HEADER_SIZE, sizeof(*header), output);
 
 
 
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
         fwrite(&buffer, sizeof(int16_t), 1, output);
     }
 
-    //5050halfwrite(buffer, sizeof(buffer), 2, output);
+    //fwrite(buffer, sizeof(buffer), 2, output);
 
     // Close files
     fclose(input);
