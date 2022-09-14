@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
         fwrite(&buffer, sizeof(int16_t), 1, output);
     }
 
-    fwrite(buffer, sizeof(buffer), 2, output);
+    //fwrite(buffer, sizeof(buffer), 2, output);
 
     // Close files
     fclose(input);
