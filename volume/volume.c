@@ -46,9 +46,9 @@ int main(int argc, char *argv[])
     // TODO: Read samples from input file and write updated data to output file
     int16_t buffer; //signed integers 16bits or 2 bytes each
 
-    size_t ret = fread(buffer, HEADER_SIZE, sizeof(*header), input);
+    fread(buffer, HEADER_SIZE, 2, input);
 
-    fwrite(buffer, HEADER_SIZE, sizeof(*header), output);
+    fwrite(buffer, HEADER_SIZE, 2, output);
 
     // Close files
     fclose(input);
