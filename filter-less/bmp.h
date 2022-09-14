@@ -54,4 +54,4 @@ typedef struct
     BYTE  rgbtGreen;
     BYTE  rgbtRed;
 } __attribute__((__packed__))
-RGBTRIPLE;
+RGBTRIPLt;
