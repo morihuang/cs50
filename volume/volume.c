@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 
     size_t ret = fread(header, HEADER_SIZE, sizeof(*header), input);
 
-    size_t fwrite(ret, HEADER_SIZE, sizeof(*header), output);
+    fwrite(header, HEADER_SIZE, sizeof(*header), output);
 
 
 
@@ -46,6 +46,9 @@ int main(int argc, char *argv[])
     // TODO: Read samples from input file and write updated data to output file
     int16_t buffer;
 
+    size_t ret = fread(buffer, HEADER_SIZE, sizeof(*header), input);
+
+    fwrite(buffer, HEADER_SIZE, sizeof(*header), output);
 
     // Close files
     fclose(input);
