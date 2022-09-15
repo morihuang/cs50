@@ -107,7 +107,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int tmpGreen = 0;
             int tmpBlue = 0;
             int a = 0;
-            int b =0;
+            int b = 0;
             float counter = 0;
 
             //inner square
