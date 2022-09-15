@@ -110,6 +110,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int tmpGreen = 0;
             int tmpBlue = 0;
             float counter = 0;
+            /*
             for (int a = i - 1; a == i + 1; a++)
             {
                 for (int b = j - 1; b == j + 1; b++)
@@ -130,20 +131,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtRed = round(tmpRed / counter);
             image[i][j].rgbtGreen = round(tmpGreen / counter);
             image[i][j].rgbtBlue = round(tmpBlue / counter);
+
+
         }
     }
     return;
 }
+*/
 
-
-
-
-
-
-
-
-
-            /*
             //inner square
             if (i - 1 > 0 || j - 1 > 0 || i + 1 < height || j + 1 < width)
             {
@@ -151,9 +146,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for (b = j - 1; b == j + 1; b++)
                     {
-                        tmpRed += copy[a][b].rgbtRed / 9.0;
-                        tmpGreen += copy[a][b].rgbtGreen / 9.0;
-                        tmpBlue += copy[a][b].rgbtBlue / 9.0;
+                        tmpRed += copy[a][b].rgbtRed;
+                        tmpGreen += copy[a][b].rgbtGreen;
+                        tmpBlue += copy[a][b].rgbtBlue;
+                        counter++;
                     }
                 }
             }
@@ -165,9 +161,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for (b = j; b == j + 1; b++)
                     {
-                        tmpRed += copy[a][b].rgbtRed / 4.0;
-                        tmpGreen += copy[a][b].rgbtGreen / 4.0;
-                        tmpBlue += copy[a][b].rgbtBlue / 4.0;
+                        tmpRed += copy[a][b].rgbtRed;
+                        tmpGreen += copy[a][b].rgbtGreen;
+                        tmpBlue += copy[a][b].rgbtBlue;
+                        counter++;
                     }
                 }
             }
@@ -179,9 +176,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for (b = j; b == width - 2; b--)
                     {
-                        tmpRed += copy[a][b].rgbtRed / 4.0;
-                        tmpGreen += copy[a][b].rgbtGreen / 4.0;
-                        tmpBlue += copy[a][b].rgbtBlue / 4.0;
+                        tmpRed += copy[a][b].rgbtRed;
+                        tmpGreen += copy[a][b].rgbtGreen;
+                        tmpBlue += copy[a][b].rgbtBlue;
+                        counter++;
                     }
                 }
             }
@@ -193,9 +191,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for (b = j; b == j + 1; b++)
                     {
-                        tmpRed += copy[a][b].rgbtRed / 4.0;
-                        tmpGreen += copy[a][b].rgbtGreen / 4.0;
-                        tmpBlue += copy[a][b].rgbtBlue / 4.0;
+                        tmpRed += copy[a][b].rgbtRed;
+                        tmpGreen += copy[a][b].rgbtGreen;
+                        tmpBlue += copy[a][b].rgbtBlue;
+                        counter++;
                     }
                 }
             }
@@ -207,9 +206,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for (b = j; b == width - 2; b--)
                     {
-                        tmpRed += copy[a][b].rgbtRed / 4.0;
-                        tmpGreen += copy[a][b].rgbtGreen / 4.0;
-                        tmpBlue += copy[a][b].rgbtBlue / 4.0;
+                        tmpRed += copy[a][b].rgbtRed;
+                        tmpGreen += copy[a][b].rgbtGreen;
+                        tmpBlue += copy[a][b].rgbtBlue;
+                        counter++;
                     }
                 }
             }
@@ -221,9 +221,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for (b = j - 1; b == j + 1; b++)
                     {
-                        tmpRed += copy[a][b].rgbtRed / 6.0;
-                        tmpGreen += copy[a][b].rgbtGreen / 6.0;
-                        tmpBlue += copy[a][b].rgbtBlue / 6.0;
+                        tmpRed += copy[a][b].rgbtRed;
+                        tmpGreen += copy[a][b].rgbtGreen;
+                        tmpBlue += copy[a][b].rgbtBlue;
+                        counter++;
                     }
                 }
             }
@@ -235,9 +236,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for (b = j - 1; b == j + 1; b++)
                     {
-                        tmpRed += copy[a][b].rgbtRed / 6.0;
-                        tmpGreen += copy[a][b].rgbtGreen / 6.0;
-                        tmpBlue += copy[a][b].rgbtBlue / 6.0;
+                        tmpRed += copy[a][b].rgbtRed;
+                        tmpGreen += copy[a][b].rgbtGreen;
+                        tmpBlue += copy[a][b].rgbtBlue;
+                        counter++;
                     }
                 }
             }
@@ -249,9 +251,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for (a = i - 1; a == i + 1; a++)
                     {
-                        tmpRed += copy[a][b].rgbtRed / 6.0;
-                        tmpGreen += copy[a][b].rgbtGreen / 6.0;
-                        tmpBlue += copy[a][b].rgbtBlue / 6.0;
+                        tmpRed += copy[a][b].rgbtRed;
+                        tmpGreen += copy[a][b].rgbtGreen;
+                        tmpBlue += copy[a][b].rgbtBlue;
+                        counter++;
                     }
                 }
             }
@@ -263,15 +266,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for (a = i - 1; a == i + 1; a++)
                     {
-                        tmpRed += copy[a][b].rgbtRed / 6.0;
-                        tmpGreen += copy[a][b].rgbtGreen / 6.0;
-                        tmpBlue += copy[a][b].rgbtBlue / 6.0;
+                        tmpRed += copy[a][b].rgbtRed;
+                        tmpGreen += copy[a][b].rgbtGreen;
+                        tmpBlue += copy[a][b].rgbtBlue;
+                        counter++;
                     }
                 }
             }
 
-            image[i][j].rgbtRed = tmpRed;
-            image[i][j].rgbtGreen = tmpGreen;
-            image[i][j].rgbtBlue = tmpBlue;
+            image[i][j].rgbtRed = round(tmpRed / counter);
+            image[i][j].rgbtGreen = round(tmpGreen / counter);
+            image[i][j].rgbtBlue = round(tmpBlue / counter);
         }
-        */
