@@ -98,24 +98,85 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int tmpRed;
             int tmpGreen;
             int tmpBlue;
+            int a;
+            int b;
 
+            //inner square
             if (i - 1 > 0 || j - 1 > 0 || i + 1 < height || j + 1 < width)
             {
-                for (int a = i - 1; i + 1; i++)
+                for (a = i - 1; i + 1; i++)
                 {
-                    for (int b = j - 1; j + 1; j++)
+                    for (b = j - 1; j + 1; j++)
                     {
-                        tmpRed += image[a][b].rgbtRed;
-                        tmpGreen += image[a][b].rgbtGreen;
-                        tmpBlue += image[a][b].rgbtBlue;
+                        tmpRed += image[a][b].rgbtRed / 9.0;
+                        tmpGreen += image[a][b].rgbtGreen / 9.0;
+                        tmpBlue += image[a][b].rgbtBlue / 9.0;
                     }
                 }
             }
 
-            elif (i = 0 && )
+            //left upper corner
+            elif (i = 0 && j = 0)
+            {
+                for (a = i; i + 1; i++)
+                {
+                    for (b = j; j + 1; j++)
+                    {
+                        tmpRed += image[a][b].rgbtRed / 4.0;
+                        tmpGreen += image[a][b].rgbtGreen / 4.0;
+                        tmpBlue += image[a][b].rgbtBlue / 4.0;
+                    }
+                }
+            }
 
-            image[i][j].rgbtRed = tmpRed / 3.0;
-            image[i][j].rgbtGreen = tmpGreen / 3.0;
-            image[i][j].rgbtBlue = tmpBlue / 3.0;
+            //right upper corner
+            elif (i = 0 && j = width - 1)
+            {
+                for (a = i; i + 1; i++)
+                {
+                    for (b = j; width - 2; j--)
+                    {
+                        tmpRed += image[a][b].rgbtRed / 4.0;
+                        tmpGreen += image[a][b].rgbtGreen / 4.0;
+                        tmpBlue += image[a][b].rgbtBlue / 4.0;
+                    }
+                }
+            }
+
+            //left lower corner
+            elif (i = height - 1 && j = 0)
+            {
+                for (a = i; height - 2; i--)
+                {
+                    for (b = j; j + 1; j++)
+                    {
+                        tmpRed += image[a][b].rgbtRed / 4.0;
+                        tmpGreen += image[a][b].rgbtGreen / 4.0;
+                        tmpBlue += image[a][b].rgbtBlue / 4.0;
+                    }
+                }
+            }
+
+            //right lower corner
+            elif (i = height - 1 && j = width - 1)
+            {
+                for (a = i; height - 2; i--)
+                {
+                    for (b = j; width - 2; j--)
+                    {
+                        tmpRed += image[a][b].rgbtRed / 4.0;
+                        tmpGreen += image[a][b].rgbtGreen / 4.0;
+                        tmpBlue += image[a][b].rgbtBlue / 4.0;
+                    }
+                }
+            }
+
+
+
+
+
+            image[i][j].rgbtRed = tmpRed;
+            image[i][j].rgbtGreen = tmpGreen;
+            image[i][j].rgbtBlue = tmpBlue;
 
 }
