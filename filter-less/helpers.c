@@ -91,7 +91,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE copy[width] = calloc(height, width * sizeof(RGBTRIPLE));
+    RGBTRIPLE copy[height][width];
 
     for (int i = 0; i < height; i++)
     {
@@ -244,7 +244,4 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-
-
-    free(copy);
 }
