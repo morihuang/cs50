@@ -115,9 +115,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             //inner square
             if (i - 1 > 0 || j - 1 > 0 || i + 1 < height || j + 1 < width)
             {
-                for (a = i - 1; i + 1; a++)
+                for (a = i - 1; a = i + 1; a++)
                 {
-                    for (b = j - 1; j + 1; b++)
+                    for (b = j - 1; b = j + 1; b++)
                     {
                         tmpRed += copy[a][b].rgbtRed / 9.0;
                         tmpGreen += copy[a][b].rgbtGreen / 9.0;
