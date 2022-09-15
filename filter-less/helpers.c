@@ -91,6 +91,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+
+
+    
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -171,9 +174,61 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
 
+            //upper edge
+            elif (i = 0 && j > 0 && j < width - 1)
+            {
+                for (a = i; 1; i++)
+                {
+                    for (b = j - 1; j + 1; j++)
+                    {
+                        tmpRed += image[a][b].rgbtRed / 6.0;
+                        tmpGreen += image[a][b].rgbtGreen / 6.0;
+                        tmpBlue += image[a][b].rgbtBlue / 6.0;
+                    }
+                }
+            }
 
+            //lower edge
+            elif (i = height - 1 && j > 0 && j < width - 1)
+            {
+                for (a = i; height - 2; i--)
+                {
+                    for (b = j - 1; j + 1; j++)
+                    {
+                        tmpRed += image[a][b].rgbtRed / 6.0;
+                        tmpGreen += image[a][b].rgbtGreen / 6.0;
+                        tmpBlue += image[a][b].rgbtBlue / 6.0;
+                    }
+                }
+            }
 
+            //left edge
+            elif (j = 0 && i > 0 && i < height - 1)
+            {
+                for (b = j; 1; j++)
+                {
+                    for (a = i - 1; i + 1; i++)
+                    {
+                        tmpRed += image[a][b].rgbtRed / 6.0;
+                        tmpGreen += image[a][b].rgbtGreen / 6.0;
+                        tmpBlue += image[a][b].rgbtBlue / 6.0;
+                    }
+                }
+            }
 
+            //right edge
+            elif (j = width - 1 && i > 0 && i < height - 1)
+            {
+                for (b = j; width - 2; j--)
+                {
+                    for (a = i - 1; i + 1; i++)
+                    {
+                        tmpRed += image[a][b].rgbtRed / 6.0;
+                        tmpGreen += image[a][b].rgbtGreen / 6.0;
+                        tmpBlue += image[a][b].rgbtBlue / 6.0;
+                    }
+                }
+            }
 
             image[i][j].rgbtRed = tmpRed;
             image[i][j].rgbtGreen = tmpGreen;
