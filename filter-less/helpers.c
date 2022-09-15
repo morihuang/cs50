@@ -128,9 +128,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             //left upper corner
             else if (i == 0 && j == 0)
             {
-                for (a = i; a == i + 1; a++)
+                for (a = i; a < i + 2; a++)
                 {
-                    for (b = j; b == j + 1; b++)
+                    for (b = j; b < j + 2; b++)
                     {
                         tmpRed += copy[a][b].rgbtRed;
                         tmpGreen += copy[a][b].rgbtGreen;
@@ -143,9 +143,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             //right upper corner
             else if (i == 0 && j == width - 1)
             {
-                for (a = i; a == i + 1; a++)
+                for (a = i; a < i + 2; a++)
                 {
-                    for (b = j; b == width - 2; b--)
+                    for (b = j; b > width - 3; b--)
                     {
                         tmpRed += copy[a][b].rgbtRed;
                         tmpGreen += copy[a][b].rgbtGreen;
@@ -158,9 +158,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             //left lower corner
             else if (i == height - 1 && j == 0)
             {
-                for (a = i; a == height - 2; a--)
+                for (a = i; a > height - 3; a--)
                 {
-                    for (b = j; b == j + 1; b++)
+                    for (b = j; b < j + 1; b++)
                     {
                         tmpRed += copy[a][b].rgbtRed;
                         tmpGreen += copy[a][b].rgbtGreen;
@@ -173,9 +173,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             //right lower corner
             else if (i == height - 1 && j == width - 1)
             {
-                for (a = i; a == height - 2; a--)
+                for (a = i; a > height - 3; a--)
                 {
-                    for (b = j; b == width - 2; b--)
+                    for (b = j; b > width - 3; b--)
                     {
                         tmpRed += copy[a][b].rgbtRed;
                         tmpGreen += copy[a][b].rgbtGreen;
@@ -188,9 +188,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             //upper edge
             else if (i == 0 && j > 0 && j < width - 1)
             {
-                for (a = i; a == 1; a++)
+                for (a = i; a < 2; a++)
                 {
-                    for (b = j - 1; b == j + 1; b++)
+                    for (b = j - 1; b < j + 2; b++)
                     {
                         tmpRed += copy[a][b].rgbtRed;
                         tmpGreen += copy[a][b].rgbtGreen;
@@ -203,9 +203,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             //lower edge
             else if (i == height - 1 && j > 0 && j < width - 1)
             {
-                for (a = i; a == height - 2; a--)
+                for (a = i; a > height - 3; a--)
                 {
-                    for (b = j - 1; b == j + 1; b++)
+                    for (b = j - 1; b < j + 2; b++)
                     {
                         tmpRed += copy[a][b].rgbtRed;
                         tmpGreen += copy[a][b].rgbtGreen;
