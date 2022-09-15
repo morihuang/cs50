@@ -22,7 +22,18 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
-    return;
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            float tmp =
+                round((image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue) / 3.0);
+            image[i][j].rgbtRed = tmp;
+            image[i][j].rgbtGreen = tmp;
+            image[i][j].rgbtBlue = tmp;
+            //return;
+        }
+    }
 }
 
 // Reflect image horizontally
