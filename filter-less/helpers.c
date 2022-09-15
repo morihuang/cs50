@@ -8,7 +8,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            float tmp =
+            int tmp =
                 round((image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue) / 3.0);
             image[i][j].rgbtRed = tmp;
             image[i][j].rgbtGreen = tmp;
@@ -26,11 +26,11 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            float sepiaRed =
+            int sepiaRed =
                 round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue);
-            float sepiaGreen =
+            int sepiaGreen =
                 round(.349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue);
-            float sepiaBlue =
+            int sepiaBlue =
                 round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue);
             if (sepiaRed > 255)
             {
@@ -70,11 +70,17 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            float tmp =
-                round((image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue) / 3.0);
-            image[i][j].rgbtRed = tmp;
-            image[i][j].rgbtGreen = tmp;
-            image[i][j].rgbtBlue = tmp;
+            int tmpRed = image[i][j].rgbtRed;
+            int tmpGreen = image[i][j].rgbtGreen;
+            int tmpBlue = image[i][j].rgbtBlue;
+
+            image[i][j].rgbtRed = image[i][- j - 1].rgbtRed;
+            image[i][j].rgbtGreen = image[i][- j - 1].rgbtGreen;
+            image[i][j].rgbtBlue = image[i][- j - 1].rgbtBlue;
+
+            image[i][- j - 1].rgbtRed = tmpRed;
+            image[i][- j - 1].rgbtGreen = tmpGreen;
+            image[i][- j - 1].rgbtBlue = tmpBlue;
             //return;
         }
     }
