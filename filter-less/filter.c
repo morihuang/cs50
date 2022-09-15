@@ -113,7 +113,6 @@ int main(int argc, char *argv[])
         // Reflection
         case 'r':
             reflect(height, width, image);
-            //printf("%i \n", image[100][-1].rgbtRed);
             break;
 
         // Sepia
