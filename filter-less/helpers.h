@@ -1,7 +1,7 @@
 #include "bmp.h"
 
 // Convert image to grayscale
-void grayscale(int height, int width, RGBTRIPLE *image[height][width]);
+void grayscale(int height, int width, RGBTRIPLE image[height][width]);
 
 // Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width]);
