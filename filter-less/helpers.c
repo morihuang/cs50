@@ -123,7 +123,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         counter++;
                     }
                 }
-                break;
             }
 
             //left upper corner
@@ -139,7 +138,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         counter++;
                     }
                 }
-                break;
             }
 
             //right upper corner
@@ -155,7 +153,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         counter++;
                     }
                 }
-                break;
             }
 
             //left lower corner
@@ -171,7 +168,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         counter++;
                     }
                 }
-                break;
             }
 
             //right lower corner
@@ -187,7 +183,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         counter++;
                     }
                 }
-                break;
             }
 
             //upper edge
@@ -203,7 +198,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         counter++;
                     }
                 }
-                break;
             }
 
             //lower edge
@@ -219,7 +213,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         counter++;
                     }
                 }
-                break;
             }
 
             //left edge
@@ -235,7 +228,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         counter++;
                     }
                 }
-                break;
             }
 
             //right edge
@@ -251,7 +243,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         counter++;
                     }
                 }
-                break;
             }
 
             image[i][j].rgbtRed = round(tmpRed / counter);
