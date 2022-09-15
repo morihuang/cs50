@@ -105,14 +105,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             */
         }
     }
-    /*
+
     int tmpRed = 0;
     int tmpGreen = 0;
     int tmpBlue = 0;
-    int a = 0;
-    int b = 0;
     int counter = 0;
-    */
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -125,9 +122,27 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int b = 0;
             int counter = 0;
             */
+           for (int a = i - 1; a == i + 1; a++)
+           {
+                for (int b = j - 1; b == j + 1; b++)
+                {
+                    if (a < 0 || b < 0 || a >= height || b >= width)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        tmpRed += copy[a][b].rgbtRed;
+                        tmpGreen += copy[a][b].rgbtGreen;
+                        tmpBlue += copy[a][b].rgbtBlue;
+                    }
+                    counter += 1;
+                }
+           }
 
-            if (i < 0 || j < 0 || i > height || j > width)
-            
+           image[i][j].rgbtRed = tmpRed / counter;
+           image[i][j].rgbtGreen = tmpGreen / counter;
+           image[i][j].rgbtBlue = tmpBlue / counter;
 
 
 
@@ -137,6 +152,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
 
 
+            /*
             //inner square
             if (i - 1 > 0 || j - 1 > 0 || i + 1 < height || j + 1 < width)
             {
@@ -267,6 +283,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtGreen = tmpGreen;
             image[i][j].rgbtBlue = tmpBlue;
         }
-    }
+        */
+        }
 
+    }
 }
