@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "stdio.h": "c",
-        "cs50.h": "c"
+        "cs50.h": "c",
+        "random": "c"
     },
     "gitdoc.enabled": true
 }
