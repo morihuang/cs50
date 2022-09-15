@@ -100,23 +100,24 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             copy[i][j] = image[i][j];
         }
     }
-
+    /*
     int tmpRed = 0;
     int tmpGreen = 0;
     int tmpBlue = 0;
     int a = 0;
     int b = 0;
+    */
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            /*
-            int tmpRed;
-            int tmpGreen;
-            int tmpBlue;
-            int a;
-            int b;
-            */
+
+            int tmpRed = 0;
+            int tmpGreen = 0;
+            int tmpBlue = 0;
+            int a = 0;
+            int b = 0;
+
 
             //inner square
             if (i - 1 > 0 || j - 1 > 0 || i + 1 < height || j + 1 < width)
