@@ -141,7 +141,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         counter++;
                     }
                 }
-                break;
+                //break;
             }
 
             //left lower corner
@@ -157,7 +157,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         counter++;
                     }
                 }
-                break;
+                //break;
             }
 
             //right lower corner
@@ -173,7 +173,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         counter++;
                     }
                 }
-                break;
+                //break;
             }
 
             //upper edge
@@ -189,7 +189,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         counter++;
                     }
                 }
-                break;
+                //break;
             }
 
             //lower edge
