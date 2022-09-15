@@ -2,7 +2,7 @@
 #include "math.h"
 
 // Convert image to grayscale
-void grayscale(int height, int width, RGBTRIPLE image[height][width])
+void grayscale(int height, int width, RGBTRIPLE *image[height][width])
 {
     for (int i = 0; i < height; i++)
     {
