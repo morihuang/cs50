@@ -205,7 +205,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         counter++;
                     }
                 }
-                break;
+                //break;
             }
 
             //left edge
@@ -221,7 +221,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         counter++;
                     }
                 }
-                break;
+                //break;
             }
 
             //right edge
@@ -237,7 +237,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         counter++;
                     }
                 }
-                break;
+                //break;
             }
 
             //inner square
@@ -253,7 +253,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         counter++;
                     }
                 }
-                break;
+                //break;
             }
             image[i][j].rgbtRed = round(tmpRed / counter);
             image[i][j].rgbtGreen = round(tmpGreen / counter);
