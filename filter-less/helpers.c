@@ -125,7 +125,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         counter++;
                     }
                 }
-                break;
+                //break;
             }
 
             //right upper corner
@@ -239,7 +239,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
                 break;
             }
-            
+
             //inner square
             if (i - 1 > 0 || j - 1 > 0 || i + 1 < height || j + 1 < width)
             {
