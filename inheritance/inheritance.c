@@ -23,7 +23,7 @@ char random_allele();
 
 int main(void)
 {
-    // Seed random number generator
+    // Seed random number generator, we’ll use later to generate "random alleles".
     srand(time(0));
 
     // Create a new family with three generations
