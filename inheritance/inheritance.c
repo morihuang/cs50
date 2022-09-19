@@ -8,8 +8,8 @@
 // Each person has two parents and two alleles
 typedef struct person
 {
-    struct person *parents[2];
-    char alleles[2];
+    struct person *parents[2];  //Each person has an array of two parents, each of which is a pointer to another person struct.
+    char alleles[2]; //Each person also has an array of two alleles, each of which is a char (either 'A', 'B', or 'O').
 }
 person;
 
