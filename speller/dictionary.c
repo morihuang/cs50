@@ -23,7 +23,7 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    
+    check_letter = tolower(char *word)
     return false;
 }
 
