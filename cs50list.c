@@ -59,7 +59,7 @@ int main(void)
     // Free list
     while (list != NULL)
     {
-        node *tmp = list->next; // node *tmp = (*list).next;
+        node *tmp = list->next; // node *tmp = (*list).next; 2 instead of 1, coz (*list).next means next node
         free(list);
         list = tmp;
     }
