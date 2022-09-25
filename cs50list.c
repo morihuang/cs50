@@ -51,7 +51,7 @@ int main(void)
     list->next->next = n; // *((*list).next).next = n;
 
     // Print list
-    for (node *tmp = list; tmp != NULL; tmp = tmp->next)
+    for (node *tmp = list; tmp != NULL; tmp = tmp->next) // tmp = (*tmp).next
     {
         printf("%i\n", tmp->number);
     }
@@ -59,7 +59,7 @@ int main(void)
     // Free list
     while (list != NULL)
     {
-        node *tmp = list->next;
+        node *tmp = list->next; // node *tmp = (*list).next;
         free(list);
         list = tmp;
     }
