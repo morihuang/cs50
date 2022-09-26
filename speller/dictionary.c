@@ -2,7 +2,9 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 #include "dictionary.h"
 
@@ -33,27 +35,28 @@ bool load(const char *dictionary)
 
     // read words into an array
     char *tmp_word[sizeof(dictionary)];
-    while (fscanf != EOF)
+    char *check;
+    while (check != "EOF")
     {
-        fscanf(file, "%s", tmp_word);
+        check = fscanf(file, "%s", *tmp_word);
     }
 
     // allocate memory to new node
     int index = 0;
 
-    for (i = 0; i < len(tmp_word); i++)
+    for (int i = 0; i < sizeof(tmp_word); i++)
     {
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
-            return FALSE;
+            return 0;
         }
 
         strcpy(n->word, tmp_word[i]);
 
         index = hash(n->word);
 
-        if *table[index] == NULL
+        if (table[index]->next == NULL)
         {
             n->next = NULL;
             table[index] = n;
@@ -67,15 +70,16 @@ bool load(const char *dictionary)
     }
 
 
-    char *dict[];
-    fread(&dict, sizeof(char), 1, file);
-
+    //char *dict[];
+    //fread(&dict, sizeof(char), 1, file);
+    /*
     for (i = 0; i <  N + 1; i++)
     {
         strcpy(n->word, dict[i]);
         n->next = NULL;
         table[] = n;
     }
+    */
 
 
 
