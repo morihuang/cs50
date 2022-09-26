@@ -22,6 +22,15 @@ node *table[N];
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
+    // TODO
+    // Open the dictionary
+    FILE *file = fopen(*dictionary, "r")
+    if file == NULL
+    {
+        return 1;
+    }
+
+    // allocate memory to new node
     node *n = malloc(sizeof(node));
     if (n == NULL)
     {
@@ -30,7 +39,7 @@ bool load(const char *dictionary)
     strcpy(n->word, "hello");
     n->next = NULL;
     table[] = n;
-    // TODO
+
     return false;
 }
 
