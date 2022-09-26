@@ -40,14 +40,17 @@ bool load(const char *dictionary)
 
     // allocate memory to new node
     int index = 0;
-    node *n = malloc(sizeof(node));
-    if (n == NULL)
-    {
-        return FALSE;
-    }
+
     for (i = 0; i < len(tmp_word); i++)
     {
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            return FALSE;
+        }
+
         strcpy(n->word, tmp_word[i]);
+
         index = hash(n->word);
 
         if *table[index] == NULL
@@ -57,7 +60,7 @@ bool load(const char *dictionary)
         }
         else
         {
-            n->next = 
+            n->next =
         }
 
     }
