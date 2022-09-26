@@ -36,7 +36,7 @@ bool load(const char *dictionary)
     // read words into an array
     char *tmp_word[sizeof(dictionary)];
     char *check;
-    while (check != "EOF")
+    while (strcmp(check, "EOF") == 0)
     {
         check = fscanf(file, "%s", *tmp_word);
     }
