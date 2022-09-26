@@ -52,8 +52,12 @@ bool load(const char *dictionary)
 
         if *table[index] == NULL
         {
-
+            n->next = NULL;
             table = n;
+        }
+        else
+        {
+            n->next = 
         }
 
     }
