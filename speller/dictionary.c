@@ -35,12 +35,10 @@ bool load(const char *dictionary)
 
     // read words into an array
     char *tmp_word[sizeof(dictionary)];
-    int check;
-
-
-    while (check != EOF)
+    int check_end = 0;
+    while (check_end != EOF)
     {
-        check = fscanf(file, "%s", *tmp_word);
+        check_end = fscanf(file, "%s", *tmp_word);
     }
 
     // allocate memory to new node
@@ -110,7 +108,7 @@ unsigned int size(void)
 bool check(const char *word)
 {
     // TODO
-    check_letter = tolower(char *word)
+    //check_letter = tolower(char *word)
     return false;
 }
 
