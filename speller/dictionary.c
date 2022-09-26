@@ -23,7 +23,13 @@ node *table[N];
 bool load(const char *dictionary)
 {
     node *n = malloc(sizeof(node));
-    
+    if (n == NULL)
+    {
+        return 1;
+    }
+    strcpy(n->word, "hello");
+    n->next = NULL;
+    table[] = n;
     // TODO
     return false;
 }
