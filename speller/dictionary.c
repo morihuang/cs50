@@ -37,6 +37,7 @@ bool load(const char *dictionary)
     {
         return 1;
     }
+    for (i = 0; i < )
     strcpy(n->word, "hello");
     n->next = NULL;
     table[] = n;
