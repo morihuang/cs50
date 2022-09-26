@@ -44,7 +44,7 @@ bool load(const char *dictionary)
         return FALSE;
     }
 
-    char *dict[];
+    cxxar *dict[];
     fread(&dict, sizeof(char), 1, file);
 
     for (i = 0; i <  N + 1; i++)
