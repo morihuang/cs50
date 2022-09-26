@@ -52,7 +52,7 @@ bool load(const char *dictionary)
 
         if *table[index] == NULL
         {
-            
+
             table = n;
         }
 
