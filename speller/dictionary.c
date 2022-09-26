@@ -22,6 +22,8 @@ node *table[N];
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
+    node *n = malloc(sizeof(node));
+    
     // TODO
     return false;
 }
