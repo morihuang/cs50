@@ -35,13 +35,13 @@ bool load(const char *dictionary)
 
     // read words into an array
     char *tmp_word[sizeof(dictionary)];
-    char *check;
+    int check;
 
-    fscanf(file, "%s", *tmp_word);
-    /*while (strcmp(check, "EOF") == 0)
+
+    while (check != EOF)
     {
-        check =
-    }*/
+        check = fscanf(file, "%s", *tmp_word);
+    }
 
     // allocate memory to new node
     int index = 0;
