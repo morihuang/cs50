@@ -25,14 +25,14 @@ bool load(const char *dictionary)
 {
     // TODO
     // Open the dictionary
-    FILE *file = fopen(*dictionary, "r")
-    if file == NULL
+    FILE *file = fopen(dictionary, "r");
+    if (file == NULL)
     {
         return 1;
     }
 
     // read words into an array
-    char tmp_word[];
+    char *tmp_word[sizeof(dictionary)];
     while (fscanf != EOF)
     {
         fscanf(file, "%s", tmp_word);
