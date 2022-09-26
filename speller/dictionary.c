@@ -38,9 +38,12 @@ bool load(const char *dictionary)
         return 1;
     }
 
+    char *dict[];
     for (i = 0; i <  N + 1; i++)
     {
-        fread 
+        fread(&dict, sizeof(file), 1, file);
+
+
         strcpy(n->word, "hello");
         n->next = NULL;
         table[] = n;
