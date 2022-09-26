@@ -13,6 +13,9 @@ typedef struct node
 }
 node;
 
+// Hash table
+node *table[N];
+
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
@@ -22,9 +25,6 @@ bool load(const char *dictionary)
 
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
-
-// Hash table
-node *table[N];
 
 // Hashes word to a number
 unsigned int hash(const char *word)
