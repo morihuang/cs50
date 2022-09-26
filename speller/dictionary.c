@@ -30,7 +30,9 @@ bool load(const char *dictionary)
     {
         return 1;
     }
+    char tmp_word[];
 
+    while
     fscanf(file, "%s", word)
 
 
