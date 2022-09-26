@@ -50,7 +50,7 @@ bool load(const char *dictionary)
         strcpy(n->word, tmp_word[i]);
         index = hash(n->word);
 
-        
+        table = n;
     }
 
 
