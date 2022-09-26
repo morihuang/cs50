@@ -30,11 +30,12 @@ bool load(const char *dictionary)
     {
         return 1;
     }
-    char tmp_word[];
 
+    // read words into an array
+    char tmp_word[];
     while (fscanf != EOF)
     {
-        fscanf(file, "%s", word);
+        fscanf(file, "%s", tmp_word);
     }
 
     // allocate memory to new node
@@ -43,8 +44,8 @@ bool load(const char *dictionary)
     {
         return FALSE;
     }
-
-    cxxar *dict[];
+    
+    char *dict[];
     fread(&dict, sizeof(char), 1, file);
 
     for (i = 0; i <  N + 1; i++)
@@ -53,6 +54,9 @@ bool load(const char *dictionary)
         n->next = NULL;
         table[] = n;
     }
+
+
+
 
 
     return false;
