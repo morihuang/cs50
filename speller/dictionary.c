@@ -56,11 +56,12 @@ bool load(const char *dictionary)
         if *table[index] == NULL
         {
             n->next = NULL;
-            table = n;
+            table[index] = n;
         }
         else
         {
-            n->next =
+            n->next = table[index]->next;
+            table[index]->next = n;
         }
 
     }
