@@ -31,11 +31,14 @@ bool load(const char *dictionary)
         return 1;
     }
 
+    fscanf(file, "%s", word)
+
+
     // allocate memory to new node
     node *n = malloc(sizeof(node));
     if (n == NULL)
     {
-        return 1;
+        return FALSE;
     }
 
     char *dict[];
