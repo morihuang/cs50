@@ -32,9 +32,10 @@ bool load(const char *dictionary)
     }
     char tmp_word[];
 
-    while
-    fscanf(file, "%s", word)
-
+    while (fscanf != EOF)
+    {
+        fscanf(file, "%s", word);
+    }
 
     // allocate memory to new node
     node *n = malloc(sizeof(node));
