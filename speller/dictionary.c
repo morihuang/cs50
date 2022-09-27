@@ -75,7 +75,7 @@ bool load(const char *dictionary)
 
 
 
-// Hashes word to a number
+// Hashes word to a number, should be 0 to N-1 indices
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
