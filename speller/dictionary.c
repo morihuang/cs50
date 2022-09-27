@@ -20,7 +20,7 @@ node;
 // TODO: Choose number of buckets in hash table
 // hash table buckets aka. threshold of the alphabet needed
 int t = 2;
-const unsigned int N = pow(26, t);
+double N = pow(26, t);
 
 // Hash table
 node *table[N];
