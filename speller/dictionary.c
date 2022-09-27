@@ -20,7 +20,7 @@ node;
 // TODO: Choose number of buckets in hash table
 // hash table buckets aka. threshold of the alphabet needed
 int t = 2;
-const unsigned int N = pow(26, t);
+const unsigned int N = 0
 
 // Hash table
 node *table[N];
@@ -81,6 +81,7 @@ bool load(const char *dictionary)
 // Hashes word to a number, should be 0 to N-1 indices
 unsigned int hash(const char *word)
 {
+    N =pow(26, t);
     // TODO: Improve this hash function
     return tolower(word[0]) - 'a';
 
