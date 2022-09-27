@@ -86,7 +86,7 @@ unsigned int hash(const char *word)
     int count = 0;
     for (int i = 0; i < t; i++)
     {
-        count = tolower(word[i]) * pow(26, i) - 'a';
+        count = (tolower(word[i]) - 'a') * pow(26, i) ;
     }
 
     return count;
