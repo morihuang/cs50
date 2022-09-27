@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 #include "dictionary.h"
 
@@ -17,7 +18,9 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = pow(26, 1);
+// hash table buckets aka. threshold of the alphabet needed
+int t = 2;
+const unsigned int N = pow(26, t);
 
 // Hash table
 node *table[N];
@@ -80,6 +83,14 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     return tolower(word[0]) - 'a';
+
+    int count = 0;
+    for (i = 0; i < t; i++)
+    {
+        count = tolower(word[i]) * pow(26, i) - 'a';
+    }
+
+    return count;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
