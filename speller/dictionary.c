@@ -41,21 +41,23 @@ bool load(const char *dictionary)
         check_end = fscanf(file, "%s", *tmp_word);
     }
 
-    // allocate memory to new node
+    // arrange data into hash table
     int index = 0;
-
     for (int i = 0; i < sizeof(tmp_word); i++)
     {
+        // allocate memory to new node
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
             return 0;
         }
-
+        // copy word to a temp array
         strcpy(n->word, tmp_word[i]);
 
+        // ask for the index in a hash
         index = hash(n->word);
 
+        // distribute in the hash table according to the situation of the table
         if (table[index]->next == NULL)
         {
             n->next = NULL;
@@ -68,23 +70,6 @@ bool load(const char *dictionary)
         }
 
     }
-
-
-    //char *dict[];
-    //fread(&dict, sizeof(char), 1, file);
-    /*
-    for (i = 0; i <  N + 1; i++)
-    {
-        strcpy(n->word, dict[i]);
-        n->next = NULL;
-        table[] = n;
-    }
-    */
-
-
-
-
-
     return false;
 }
 
