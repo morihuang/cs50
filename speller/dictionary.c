@@ -45,6 +45,7 @@ bool load(const char *dictionary)
 
     // arrange data into hash table
     int index = 0;
+    int count_words = 0;
     for (int i = 0; i < sizeof(tmp_word); i++)
     {
         // allocate memory to new node
@@ -70,6 +71,7 @@ bool load(const char *dictionary)
             n->next = table[index]->next;
             table[index]->next = n;
         }
+        count_words++;
 
     }
     return 0;
@@ -96,8 +98,7 @@ unsigned int hash(const char *word)
 unsigned int size(void)
 {
     // TODO
-
-    return 0;
+    return count_words;
 }
 
 // Returns true if word is in dictionary, else false
