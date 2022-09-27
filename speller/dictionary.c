@@ -79,7 +79,7 @@ bool load(const char *dictionary)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    return toupper(word[0]) - 'A';
+    return tolower(word[0]) - 'a';
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
