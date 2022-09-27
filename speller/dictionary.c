@@ -70,7 +70,7 @@ bool load(const char *dictionary)
         }
 
     }
-    return false;
+    // return false;
 }
 
 
