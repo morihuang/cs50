@@ -82,8 +82,7 @@ bool load(const char *dictionary)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    return tolower(word[0]) - 'a';
-
+    // to iterate through the input word and find the index
     int count = 0;
     for (int i = 0; i < t; i++)
     {
@@ -97,6 +96,7 @@ unsigned int hash(const char *word)
 unsigned int size(void)
 {
     // TODO
+
     return 0;
 }
 
