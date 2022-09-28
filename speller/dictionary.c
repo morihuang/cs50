@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <strings.h>
 #include <math.h>
 #include "dictionary.h"
 
@@ -20,6 +21,7 @@ node;
 // hash table buckets aka. threshold of the alphabet needed
 int t = 2;
 const unsigned int N = 676;
+int count_words = 0;
 
 // Hash table
 node *table[N];
@@ -38,6 +40,7 @@ bool load(const char *dictionary)
     // read words into an array
     char *tmp_word[sizeof(dictionary)];
     int check_end = 0;
+    bool ans = false;
     while (check_end != EOF)
     {
         check_end = fscanf(file, "%s", *tmp_word);
@@ -45,7 +48,6 @@ bool load(const char *dictionary)
 
     // arrange data into hash table
     int index = 0;
-    int count_words = 0;
     for (int i = 0; i < sizeof(tmp_word); i++)
     {
         // allocate memory to new node
@@ -72,13 +74,10 @@ bool load(const char *dictionary)
             table[index]->next = n;
         }
         count_words++;
-
+        ans = true;
     }
-    return 0;
-    // return false;
+    return ans;
 }
-
-
 
 // Hashes word to a number, should be 0 to N-1 indices
 unsigned int hash(const char *word)
@@ -105,13 +104,40 @@ unsigned int size(void)
 bool check(const char *word)
 {
     // TODO
-    //check_letter = tolower(char *word)
-    return false;
+    int i_input = hash(word); // get the index of input word
+    int result = 1; // check the comparison result
+    // char *ref_word = table[i_input]->word; // get the word
+    node *pter = table[i_input]->next; // a temp pter to navigate through the linked list
+    bool ans = false;
+    // compare each words in the linked list
+    while (pter->next != NULL)
+    {
+        if (result != 0)
+        {
+            pter = pter->next;
+            //ref_word = table[i_input]->word;
+            result = strcasecmp(word, pter->word);
+        }
+        else
+        {
+            ans = true;
+        }
+    }
+    return ans;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
     // TODO
+    for (int i = 0; i < N; i++)
+    {
+        node *tmp = table[i]->next;
+        free(table[i]);
+        table[i] = tmp;
+    }
     return false;
 }
+
+
+
