@@ -40,9 +40,9 @@ bool load(const char *dictionary)
     char *tmp_word[sizeof(dictionary)];
     int check_end = 0;
     bool ans = false;
-    while (check_end == 1)
+    while (fscanf(file, "%s", *tmp_word) != EOF)
     {
-        check_end = fscanf(file, "%s", *tmp_word);
+        ;
     }
     if
 
