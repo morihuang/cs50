@@ -34,8 +34,12 @@ bool load(const char *dictionary)
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
-        return 1;
+        return false;
     }
+    else
+    {
+
+
 
     // read words into an array
     char *tmp_word[sizeof(dictionary)];
@@ -76,7 +80,10 @@ bool load(const char *dictionary)
         count_words++;
         ans = true;
     }
-    return ans;
+
+    }
+    fclose(FILE);
+    return 0;
 }
 
 // Hashes word to a number, should be 0 to N-1 indices
