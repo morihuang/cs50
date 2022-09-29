@@ -36,47 +36,45 @@ bool load(const char *dictionary)
     {
         return false;
     }
-    else
+    // read words into an array
+    char *tmp_word[sizeof(dictionary)];
+    int check_end = 0;
+    bool ans = false;
+    while (check_end != EOF)
     {
-        // read words into an array
-        char *tmp_word[sizeof(dictionary)];
-        int check_end = 0;
-        bool ans = false;
-        while (check_end != EOF)
+        check_end = fscanf(file, "%s", *tmp_word);
+    }
+
+    // arrange data into hash table
+    int index = 0;
+    for (int i = 0; i < sizeof(tmp_word); i++)
+    {
+        // allocate memory to new node
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
         {
-            check_end = fscanf(file, "%s", *tmp_word);
+            return 0;
         }
+        // copy word to a temp array
+        strcpy(n->word, tmp_word[i]);
 
-        // arrange data into hash table
-        int index = 0;
-        for (int i = 0; i < sizeof(tmp_word); i++)
+        // ask for the index in a hash
+        index = hash(n->word);
+
+        // distribute in the hash table according to the situation of the table
+        if (table[index]->next == NULL)
         {
-            // allocate memory to new node
-            node *n = malloc(sizeof(node));
-            if (n == NULL)
-            {
-                return 0;
-            }
-            // copy word to a temp array
-            strcpy(n->word, tmp_word[i]);
-
-            // ask for the index in a hash
-            index = hash(n->word);
-
-            // distribute in the hash table according to the situation of the table
-            if (table[index]->next == NULL)
-            {
-                n->next = NULL;
-                table[index] = n;
-            }
-            else
-            {
-                n->next = table[index]->next;
-                table[index]->next = n;
-            }
-            count_words++;
-            ans = true;
+            n->next = NULL;
+            table[index] = n;
         }
+        else
+        {
+            n->next = table[index]->next;
+            table[index]->next = n;
+        }
+        count_words++;
+        ans = true;
+    }
 
     }
     fclose(FILE);
