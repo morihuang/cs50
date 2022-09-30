@@ -89,7 +89,6 @@ unsigned int hash(const char *word) // an integer that will be negative represen
     {
         count += (tolower(word[i]) - 'a') * pow(26, t-i-1);
     }
-
     return count;
 }
 
