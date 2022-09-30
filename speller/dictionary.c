@@ -80,7 +80,7 @@ bool load(const char *dictionary)
 }
 
 // Hashes word to a number, should be 0 to N-1 indices
-unsigned int hash(const char *word)
+unsigned int hash(const char *word) // an integer that will be negative representing which index in the hash table u will use
 {
     // TODO: Improve this hash function
     // to iterate through the input word and find the index
