@@ -44,7 +44,6 @@ bool load(const char *dictionary)
     {
         check_end = fscanf(file, "%s", *tmp_word);
     }
-    if
 
     // arrange data into hash table
     int index = 0;
