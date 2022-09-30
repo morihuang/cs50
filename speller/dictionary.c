@@ -73,11 +73,9 @@ bool load(const char *dictionary)
             table[index]->next = n;
         }
         count_words++;
-        ans = true;
     }
 
-    }
-    fclose(FILE);
+    fclose(file);
     return 0;
 }
 
