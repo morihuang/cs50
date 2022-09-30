@@ -110,6 +110,7 @@ bool check(const char *word)
 
     // compare each words in the linked list
     while (pter->next != NULL)
+    //for (int i = 0; i < t; i++) // for text
     {
         result = strcasecmp(word, pter->word);
         if (result != 0)
