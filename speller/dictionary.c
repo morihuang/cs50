@@ -107,22 +107,21 @@ bool check(const char *word)
     int result = 1; // check the comparison result
     // char *ref_word = table[i_input]->word; // get the word
     node *pter = table[i_input]->next; // a temp pter to navigate through the linked list
-    bool ans = false;
+
     // compare each words in the linked list
     while (pter->next != NULL)
     {
+        result = strcasecmp(word, pter->word);
         if (result != 0)
         {
             pter = pter->next;
-            //ref_word = table[i_input]->word;
-            result = strcasecmp(word, pter->word);
         }
         else
         {
-            ans = true;
+            return true;
         }
     }
-    return ans;
+    return false;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
