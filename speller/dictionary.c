@@ -1,5 +1,4 @@
 // Implements a dictionary's functionality
-
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdlib.h>
@@ -34,20 +33,22 @@ bool load(const char *dictionary)
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
+        printf("no such file.");
         return false;
     }
     // read words into an array
-    char *tmp_word[sizeof(dictionary)];
+    char tmp_word[200000];
     int check_end = 0;
     bool ans = false;
     while (check_end != EOF)
     {
-        check_end = fscanf(file, "%s", *tmp_word);
+        check_end = fscanf(file, "%s", tmp_word);
+        count_words++;
     }
 
     // arrange data into hash table
     int index = 0;
-    for (int i = 0; i < sizeof(tmp_word); i++)
+    for (int i = 0; i < ; i++)
     {
         // allocate memory to new node
         node *n = malloc(sizeof(node));
@@ -56,7 +57,7 @@ bool load(const char *dictionary)
             return 0;
         }
         // copy word to a temp array
-        strcpy(n->word, tmp_word[i]);
+        strcpy(n->word, &tmp_word[i]);
 
         // ask for the index in a hash
         index = hash(n->word);
@@ -72,9 +73,7 @@ bool load(const char *dictionary)
             n->next = table[index]->next;
             table[index]->next = n;
         }
-        count_words++;
     }
-
     fclose(file);
     return 0;
 }
@@ -135,7 +134,7 @@ bool unload(void)
         free(table[i]);
         table[i] = tmp;
     }
-    return false;
+    return true;
 }
 
 
