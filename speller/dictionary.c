@@ -36,6 +36,7 @@ bool load(const char *dictionary)
         printf("no such file.");
         return false;
     }
+
     // read words into an array
     char tmp_word[200000];
     int check_end = 0;
@@ -48,32 +49,41 @@ bool load(const char *dictionary)
 
     // arrange data into hash table
     int index = 0;
+
     for (int i = 0; i < sizeof(tmp_word); i++)
     {
         // allocate memory to new node
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
-            return 0;
+            //free(table[index]);
+            printf("no enough memory.");
+            return false;
         }
         // copy word to a temp array
         strcpy(n->word, &tmp_word[i]);
 
         // ask for the index in a hash
         index = hash(n->word);
-
+        printf("im here0!\n");
         // distribute in the hash table according to the situation of the table
-        if (table[index]->next == NULL)
+        if (table[index] != NULL)
         {
-            n->next = NULL;
-            table[index] = n;
+            printf("im here1.1!\n");
+            //n->next = NULL;
+            //table[index] = n;
+            printf("im here1.2!\n");
         }
         else
         {
-            n->next = table[index]->next;
-            table[index]->next = n;
+
+            //n->next = table[index]->next;
+            //table[index]->next = n;
+            printf("im here2!\n");
         }
     }
+
+    printf("im here3!\n");
     fclose(file);
     return 1;
 }
