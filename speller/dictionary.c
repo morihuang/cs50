@@ -48,7 +48,7 @@ bool load(const char *dictionary)
 
     // arrange data into hash table
     int index = 0;
-    for (int i = 0; i < ; i++)
+    for (int i = 0; i < sizeof(tmp_word); i++)
     {
         // allocate memory to new node
         node *n = malloc(sizeof(node));
@@ -75,7 +75,7 @@ bool load(const char *dictionary)
         }
     }
     fclose(file);
-    return 0;
+    return 1;
 }
 
 // Hashes word to a number, should be 0 to N-1 indices
