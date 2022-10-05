@@ -76,7 +76,7 @@ bool load(const char *dictionary)
         }
         else
         {
-            n->next = table[index]->nextx;
+            n->next = table[index]->next;
             table[index]->next = n;
             printf("im here2!\n");
         }
