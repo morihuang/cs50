@@ -67,18 +67,17 @@ bool load(const char *dictionary)
         index = hash(n->word);
         printf("im here0!\n");
         // distribute in the hash table according to the situation of the table
-        if (table[index] != NULL)
+        if (table[index] == NULL)
         {
             printf("im here1.1!\n");
-            //n->next = NULL;
-            //table[index] = n;
+            n->next = NULL;
+            table[index] = n;
             printf("im here1.2!\n");
         }
         else
         {
-
-            //n->next = table[index]->next;
-            //table[index]->next = n;
+            n->next = table[index]->next;
+            table[index]->next = n;
             printf("im here2!\n");
         }
     }
