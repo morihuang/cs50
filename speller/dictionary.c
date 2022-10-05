@@ -115,7 +115,7 @@ bool check(const char *word)
     int i_input = hash(word); // get the index of input word
     int result = 1; // check the comparison result
     // char *ref_word = table[i_input]->word; // get the word
-    node *pter = table[i_input]->next; // a temp pter to navigate through the linked list
+    node *pter = table[i_input] // a temp pter to navigate through the linked list
 
     // compare each words in the linked list
     while (pter->next != NULL)
