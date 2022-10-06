@@ -79,7 +79,7 @@ bool load(const char *dictionary)
 
         // copy word to a temp array
         strcpy(n->word, &tmp_word[i]);
-        printf("im here1.1!\n");
+        printf("%s\n", n->word);
         // distribute in the hash table according to the situation of the table
         n->next = table[2];
         table[2] = n;
