@@ -70,6 +70,7 @@ bool load(const char *dictionary)
         // ask for the index in a hash
         index = hash(n->word);
         printf("im here0!\n");
+        printf("%i\n", index);
 
         // copy word to a temp array
         strcpy(n->word, tmp_word);
