@@ -51,12 +51,12 @@ bool load(const char *dictionary)
     }
 
     // read words into an array
-    char tmp_word[0];
+    char tmp_word;
     int check_end = 0;
     bool ans = false;
     while (check_end != EOF)
     {
-        check_end = fscanf(file, "%s", tmp_word[0]);
+        check_end = fscanf(file, "%s", tmp_word);
         for (int i = 0; i < sizeof(file); i++)
         {
             // allocate memory to new node
@@ -109,7 +109,7 @@ bool load(const char *dictionary)
         table[2] = n;
         printf("im here1.2!\n");
 
-        /*
+
         if (table[index]->next == NULL)
         {
             printf("im here1.1!\n");
@@ -124,7 +124,7 @@ bool load(const char *dictionary)
             printf("im here2!\n");
         }
         */
-    }
+
 
     printf("im here3!\n");
     fclose(file);
