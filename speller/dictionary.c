@@ -57,8 +57,6 @@ bool load(const char *dictionary)
     while (check_end != EOF)
     {
         check_end = fscanf(file, "%s", tmp_word);
-        for (int i = 0; i < sizeof(file); i++)
-        {
             // allocate memory to new node
             node *n = malloc(sizeof(node));
             if (n == NULL)
@@ -78,7 +76,7 @@ bool load(const char *dictionary)
             n->next = table[2];
             table[2] = n;
             printf("im here1.2!\n");
-        }
+        
 
         count_words++;
     }
