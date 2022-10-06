@@ -51,7 +51,7 @@ bool load(const char *dictionary)
     }
 
     // read words into an array
-    char tmp_word[0];
+    char tmp_word[200000];
     int check_end = 0;
     bool ans = false;
     while (check_end != EOF)
@@ -65,16 +65,20 @@ bool load(const char *dictionary)
             printf("no enough memory.");
             return false;
         }
+        // arrange data into hash table
+        int index = 0;
+
         // ask for the index in a hash
-        //index = hash(n->word);
+        index = hash(n->word);
         printf("im here0!\n");
 
         // copy word to a temp array
         strcpy(n->word, tmp_word);
         printf("%s\n", n->word);
+
         // distribute in the hash table according to the situation of the table
-        n->next = table[2];
-        table[2] = n;
+        n->next = table[index];
+        table[index] = n;
         printf("im here1.2!\n");
 
 
