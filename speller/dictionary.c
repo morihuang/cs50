@@ -38,7 +38,7 @@ bool load(const char *dictionary)
             printf("no enough memory.");
             return false;
         }
-        strcpy(table[i]->word, "$");
+        strcpy(table[i]->word, "0");
         table[i]->next = NULL;
     }
 
