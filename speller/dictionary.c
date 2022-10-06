@@ -32,7 +32,12 @@ bool load(const char *dictionary)
     // initialize the hash table
     for (int i = 0; i<N; i++)
     {
-        
+        table[i] = malloc(sizeof(node));
+        if (table[i] == NULL)
+        {
+            printf("no enough memory.");
+            return false;
+        }
         strcpy(table[i]->word, "$");
         table[i]->next = NULL;
     }
@@ -75,7 +80,7 @@ bool load(const char *dictionary)
         index = hash(n->word);
         printf("im here0!\n");
         // distribute in the hash table according to the situation of the table
-        if (table[index] == NULL)
+        if (table[index]->next == NULL)
         {
             printf("im here1.1!\n");
             n->next = NULL;
