@@ -32,6 +32,7 @@ bool load(const char *dictionary)
     // initialize the hash table
     for (int i = 0; i<N; i++)
     {
+        
         strcpy(table[i]->word, "$");
         table[i]->next = NULL;
     }
