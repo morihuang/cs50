@@ -51,7 +51,7 @@ bool load(const char *dictionary)
     }
 
     // read words into an array
-    char tmp_word[200000];
+    char tmp_word[0];
     int check_end = 0;
     bool ans = false;
     while (check_end != EOF)
@@ -59,11 +59,11 @@ bool load(const char *dictionary)
         check_end = fscanf(file, "%s", tmp_word);
         count_words++;
     }
-
+    printf("im here-1!\n");
     // arrange data into hash table
     //int index = 0;
 
-    for (int i = 0; i < sizeof(tmp_word); i++)
+    for (int i = 0; i < sizeof(file); i++)
     {
         // allocate memory to new node
         node *n = malloc(sizeof(node));
