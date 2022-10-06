@@ -1,0 +1,17 @@
+
+MISSPELLED WORDS
+
+A
+cat
+not
+a
+
+WORDS MISSPELLED:     4
+WORDS IN DICTIONARY:  5
+WORDS IN TEXT:        6
+TIME IN load:         0.00
+TIME IN check:        0.00
+TIME IN size:         0.00
+TIME IN unload:       0.00
+TIME IN TOTAL:        0.00
+

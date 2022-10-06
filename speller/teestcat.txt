@@ -1,0 +1,18 @@
+
+MISSPELLED WORDS
+
+A
+cat
+is
+not
+a
+
+WORDS MISSPELLED:     5
+WORDS IN DICTIONARY:  3
+WORDS IN TEXT:        6
+TIME IN load:         0.00
+TIME IN check:        0.00
+TIME IN size:         0.00
+TIME IN unload:       0.00
+TIME IN TOTAL:        0.00
+
