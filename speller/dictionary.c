@@ -69,63 +69,16 @@ bool load(const char *dictionary)
 
         // copy word to a temp array
         strcpy(n->word, tmp_word);
-        //printf("%s\n", n->word);
 
         // ask for the index in a hash
         index = hash(n->word);
-        // printf("im here0!\n");
-        //printf("%i\n", index);
 
         // distribute in the hash table according to the situation of the table
         n->next = table[index]->next;
         table[index]->next = n;
-        //printf("im here1.2!\n");
 
         count_words++;
     }
-    //printf("%i\n", count_words);
-    /*
-    // arrange data into hash table
-    //int index = 0;
-
-    for (int i = 0; i < sizeof(file); i++)
-    {
-        // allocate memory to new node
-        node *n = malloc(sizeof(node));
-        if (n == NULL)
-        {
-            //free(table[index]);
-            printf("no enough memory.");
-            return false;
-        }
-        // ask for the index in a hash
-        //index = hash(n->word);
-        printf("im here0!\n");
-
-        // copy word to a temp array
-        strcpy(n->word, &tmp_word[i]);
-        printf("%s\n", n->word);
-        // distribute in the hash table according to the situation of the table
-        n->next = table[2];
-        table[2] = n;
-        printf("im here1.2!\n");
-
-
-        if (table[index]->next == NULL)
-        {
-            printf("im here1.1!\n");
-            n->next = NULL;
-            table[index] = n;
-            printf("im here1.2!\n");
-        }
-        else
-        {
-            n->next = table[index]->next;
-            table[index]->next = n;
-            printf("im here2!\n");
-        }
-        */
-    //printf("im here3!\n");
     fclose(file);
     return 1;
 }
