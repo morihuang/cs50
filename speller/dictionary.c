@@ -29,6 +29,13 @@ node *table[N];
 bool load(const char *dictionary)
 {
     // TODO
+    // initialize the hash table
+    for (int i = 0; i<N; i++)
+    {
+        table[N]->word = "/0";
+        table[N]->next = NULL;
+    }
+
     // Open the dictionary
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
