@@ -4228,8 +4228,8 @@ WORDS MISSPELLED:     4222
 WORDS IN DICTIONARY:  143092
 WORDS IN TEXT:        17756
 TIME IN load:         0.03
-TIME IN check:        0.12
+TIME IN check:        0.11
 TIME IN size:         0.00
 TIME IN unload:       0.00
-TIME IN TOTAL:        0.15
+TIME IN TOTAL:        0.14
 
