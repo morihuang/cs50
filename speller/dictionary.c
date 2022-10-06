@@ -66,7 +66,7 @@ bool load(const char *dictionary)
         }
         // arrange data into hash table
         int index = 0;
-        
+
         // copy word to a temp array
         strcpy(n->word, tmp_word);
         printf("%s\n", n->word);
@@ -139,9 +139,16 @@ unsigned int hash(const char *word) // an integer that will be negative represen
     // TODO: Improve this hash function
     // to iterate through the input word and find the index
     int count = 0;
-    for (int i = 0; i < t; i++)
+    if (strlen(word) == 1)
     {
-        count += (tolower(word[i]) - 'a') * pow(26, t-i-1);
+        count = (tolower(word[0]) - 'a');
+    }
+    else
+    {
+        for (int i = 0; i < t; i++)
+        {
+            count += (tolower(word[i]) - 'a') * pow(26, t-i-1);
+        }
     }
     return count;
 }
