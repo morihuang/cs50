@@ -66,15 +66,15 @@ bool load(const char *dictionary)
         }
         // arrange data into hash table
         int index = 0;
+        
+        // copy word to a temp array
+        strcpy(n->word, tmp_word);
+        printf("%s\n", n->word);
 
         // ask for the index in a hash
         index = hash(n->word);
         printf("im here0!\n");
         printf("%i\n", index);
-
-        // copy word to a temp array
-        strcpy(n->word, tmp_word);
-        printf("%s\n", n->word);
 
         // distribute in the hash table according to the situation of the table
         n->next = table[index]->next;
