@@ -139,6 +139,7 @@ unsigned int hash(const char *word) // an integer that will be negative represen
     // TODO: Improve this hash function
     // to iterate through the input word and find the index
     int count = 0;
+    int ex_sbl = 
     if (strlen(word) == 1)
     {
         count = (tolower(word[0]) - 'a');
