@@ -69,22 +69,21 @@ bool load(const char *dictionary)
 
         // copy word to a temp array
         strcpy(n->word, tmp_word);
-        printf("%s\n", n->word);
+        //printf("%s\n", n->word);
 
         // ask for the index in a hash
         index = hash(n->word);
-        printf("im here0!\n");
-        printf("%i\n", index);
+        // printf("im here0!\n");
+        //printf("%i\n", index);
 
         // distribute in the hash table according to the situation of the table
         n->next = table[index]->next;
         table[index]->next = n;
-        printf("im here1.2!\n");
-
+        //printf("im here1.2!\n");
 
         count_words++;
     }
-    printf("%i\n", count_words);
+    //printf("%i\n", count_words);
     /*
     // arrange data into hash table
     //int index = 0;
@@ -126,9 +125,7 @@ bool load(const char *dictionary)
             printf("im here2!\n");
         }
         */
-
-
-    printf("im here3!\n");
+    //printf("im here3!\n");
     fclose(file);
     return 1;
 }
@@ -142,7 +139,7 @@ unsigned int hash(const char *word) // an integer that will be negative represen
 
     if (strlen(word) == 1)
     {
-        count = (tolower(word[0]) - 'a');
+        count = (tolower(word[0]) - 'a') * pow(26, 1);
         return count;
     }
 
@@ -162,7 +159,14 @@ unsigned int hash(const char *word) // an integer that will be negative represen
     {
         for (int i = 0; i < t; i++)
         {
-            count += (tolower(word[i]) - 'a') * pow(26, t-i-1);
+            if (i == ex_id)
+            {
+                continue;
+            }
+            else
+            {
+                count += (tolower(word[i]) - 'a') * pow(26, t-i-1);
+            }
         }
     }
     else
