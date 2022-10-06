@@ -61,7 +61,7 @@ bool load(const char *dictionary)
     }
 
     // arrange data into hash table
-    int index = 0;
+    //int index = 0;
 
     for (int i = 0; i < sizeof(tmp_word); i++)
     {
@@ -74,7 +74,7 @@ bool load(const char *dictionary)
             return false;
         }
         // ask for the index in a hash
-        index = hash(n->word);
+        //index = hash(n->word);
         printf("im here0!\n");
 
         // copy word to a temp array
