@@ -143,6 +143,7 @@ unsigned int hash(const char *word) // an integer that will be negative represen
     {
         count = (tolower(word[0]) - 'a');
     }
+    else if (word[0] )
     else
     {
         for (int i = 0; i < t; i++)
