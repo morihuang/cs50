@@ -139,12 +139,33 @@ unsigned int hash(const char *word) // an integer that will be negative represen
     // TODO: Improve this hash function
     // to iterate through the input word and find the index
     int count = 0;
-    int ex_sbl = 
+
     if (strlen(word) == 1)
     {
         count = (tolower(word[0]) - 'a');
+        return count;
     }
-    else if (word[0] )
+
+    //symbol detector
+    bool ex_sbl = false;
+    int ex_id = -1;
+    for (int i = 0; i<2; i++)
+    {
+         if ((word[i] > -1 && word[i] < 15) || (word[i] > 24 && word[i] < 32) || (word[i] > 89 && word[i] < 94))
+         {
+            ex_sbl = true;
+            ex_id = i;
+         }
+    }
+
+
+    else if (ex_sbl = true)
+    {
+        for (int i = 0; i < t; i++)
+        {
+            count += (tolower(word[i]) - 'a') * pow(26, t-i-1);
+        }
+    }
     else
     {
         for (int i = 0; i < t; i++)
