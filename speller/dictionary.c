@@ -158,8 +158,7 @@ unsigned int hash(const char *word) // an integer that will be negative represen
          }
     }
 
-
-    else if (ex_sbl = true)
+    if (ex_sbl == true)
     {
         for (int i = 0; i < t; i++)
         {
