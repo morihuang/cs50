@@ -57,30 +57,30 @@ bool load(const char *dictionary)
     while (check_end != EOF)
     {
         check_end = fscanf(file, "%s", tmp_word);
-            // allocate memory to new node
-            node *n = malloc(sizeof(node));
-            if (n == NULL)
-            {
-                //free(table[index]);
-                printf("no enough memory.");
-                return false;
-            }
-            // ask for the index in a hash
-            //index = hash(n->word);
-            printf("im here0!\n");
+        // allocate memory to new node
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            //free(table[index]);
+            printf("no enough memory.");
+            return false;
+        }
+        // ask for the index in a hash
+        //index = hash(n->word);
+        printf("im here0!\n");
 
-            // copy word to a temp array
-            strcpy(n->word, tmp_word);
-            printf("%s\n", n->word);
-            // distribute in the hash table according to the situation of the table
-            n->next = table[2];
-            table[2] = n;
-            printf("im here1.2!\n");
-        
+        // copy word to a temp array
+        strcpy(n->word, tmp_word);
+        printf("%s\n", n->word);
+        // distribute in the hash table according to the situation of the table
+        n->next = table[2];
+        table[2] = n;
+        printf("im here1.2!\n");
+
 
         count_words++;
     }
-
+    printf("%i\n", count_words);
     /*
     // arrange data into hash table
     //int index = 0;
