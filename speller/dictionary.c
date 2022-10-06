@@ -73,13 +73,19 @@ bool load(const char *dictionary)
             printf("no enough memory.");
             return false;
         }
-        // copy word to a temp array
-        strcpy(n->word, &tmp_word[i]);
-
         // ask for the index in a hash
         index = hash(n->word);
         printf("im here0!\n");
+
+        // copy word to a temp array
+        strcpy(n->word, &tmp_word[i]);
+        printf("im here1.1!\n");
         // distribute in the hash table according to the situation of the table
+        n->next = table[2];
+        table[2] = n;
+        printf("im here1.2!\n");
+
+        /*
         if (table[index]->next == NULL)
         {
             printf("im here1.1!\n");
@@ -93,6 +99,7 @@ bool load(const char *dictionary)
             table[index]->next = n;
             printf("im here2!\n");
         }
+        */
     }
 
     printf("im here3!\n");
