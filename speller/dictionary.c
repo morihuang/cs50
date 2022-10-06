@@ -77,8 +77,8 @@ bool load(const char *dictionary)
         printf("%s\n", n->word);
 
         // distribute in the hash table according to the situation of the table
-        n->next = table[index];
-        table[index] = n;
+        n->next = table[index]->next;
+        table[index]->next = n;
         printf("im here1.2!\n");
 
 
