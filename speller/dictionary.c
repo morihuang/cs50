@@ -53,7 +53,6 @@ bool load(const char *dictionary)
     // read words into an array
     char tmp_word[200000];
     int check_end = 0;
-    bool ans = false;
     while (check_end != EOF)
     {
         check_end = fscanf(file, "%s", tmp_word);
